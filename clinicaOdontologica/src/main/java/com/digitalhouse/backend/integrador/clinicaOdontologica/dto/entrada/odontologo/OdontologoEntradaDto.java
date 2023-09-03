@@ -13,8 +13,8 @@ public class OdontologoEntradaDto {
     @NotNull(message = "Numero Matricula no puede ser nulo")
     @NotBlank(message = "Debe tener numero matricula")
     @Pattern(regexp = "^[A-Z]{2}-\\d{1,3}\\d*$")
-    @Size(min = 10, message = "La matricula debe tener 10 caracteres")
-    @Size(max = 10,message = "La matricula debe tener 10 caracteres")
+    @Size(min = 10, message = "La matricula debe tener 10 caracteres minomo")
+    @Size(max = 12,message = "La matricula debe tener 12 caracteres Maximo")
     private int numeroMatricula;
 
     @NotBlank(message = "Odontolo debe tener nombre")
