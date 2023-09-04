@@ -1,13 +1,21 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.domicilio;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class DomicilioEntradaDto {
-
+    @NotNull(message = "La calle no puede ser nula")
+    @NotBlank(message = "Debe completar con una calle")
     private String calle;
+    @NotNull(message = "El nro no puede ser nula")
+    @NotBlank(message = "Debe completar con un numero")
+    @Pattern(regexp = "\\d{1,8}", message = "El número debe tener como máximo 8 dígitos")
     private int numero;
+    @NotNull(message = "La localidad no puede ser nula")
+    @NotBlank(message = "Debe completar con una localidad")
     private String localidad;
+    @NotNull(message = "La Provincia no puede ser nula")
+    @NotBlank(message = "Debe completar con una Provincia")
     private String provincia;
-
-
 
     public DomicilioEntradaDto() {
     }
