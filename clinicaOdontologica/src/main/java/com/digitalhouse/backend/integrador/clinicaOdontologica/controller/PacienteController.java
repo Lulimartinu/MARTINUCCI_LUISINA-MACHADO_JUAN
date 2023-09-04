@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/pacientes")
 
 public class PacienteController {
-    private final com.backend.clinicaodontologica.service.IPacienteService
+
 }

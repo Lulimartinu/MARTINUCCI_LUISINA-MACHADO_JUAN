@@ -1,5 +1,12 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente;
 
+import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Domicilio;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class PacienteEntradaDto {
