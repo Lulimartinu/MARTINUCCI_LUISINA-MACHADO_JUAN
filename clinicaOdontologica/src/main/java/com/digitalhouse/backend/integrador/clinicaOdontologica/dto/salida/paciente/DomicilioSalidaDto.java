@@ -1,4 +1,4 @@
-package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.Paciente;
+package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente;
 
 public class DomicilioSalidaDto {
     private int id;
