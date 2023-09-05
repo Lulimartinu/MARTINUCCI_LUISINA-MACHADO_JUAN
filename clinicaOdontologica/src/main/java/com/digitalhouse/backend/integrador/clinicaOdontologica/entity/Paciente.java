@@ -3,7 +3,7 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.entity;
 import java.time.LocalDate;
 
 public class Paciente {
-    private int id;
+    private Long id;
     private String nombrePaciente;
     private String apellidoPaciente;
     private int dni;
@@ -14,7 +14,7 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(int id, String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
+    public Paciente(Long id, String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
         this.id = id;
         this.nombrePaciente = nombrePaciente;
         this.apellidoPaciente = apellidoPaciente;
@@ -31,12 +31,11 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(Long id) { this.id = id;
     }
 
     public String getNombrePaciente() {

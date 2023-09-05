@@ -3,7 +3,7 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.entity;
 import java.time.LocalDateTime;
 
 public class Turno {
-    private int id;
+    private Long id;
     private Odontologo odontologo;
     private Paciente paciente;
     private LocalDateTime fechaYHora;
@@ -11,7 +11,7 @@ public class Turno {
     public Turno() {
     }
 
-    public Turno(int id, Odontologo odontologo, Paciente paciente, LocalDateTime fechaYHora) {
+    public Turno(Long id, Odontologo odontologo, Paciente paciente, LocalDateTime fechaYHora) {
         this.id = id;
         this.odontologo = odontologo;
         this.paciente = paciente;
@@ -23,11 +23,11 @@ public class Turno {
         this.paciente = paciente;
         this.fechaYHora = fechaYHora;
     }
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

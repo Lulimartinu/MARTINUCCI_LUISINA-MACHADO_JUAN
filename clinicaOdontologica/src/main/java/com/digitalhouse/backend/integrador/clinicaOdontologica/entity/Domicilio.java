@@ -1,18 +1,18 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.entity;
 
 public class Domicilio {
-    private int id;
+    private Long id;
     private String calle;
     private int numero;
     private String localidad;
     private String provincia;
-    public int getId() {
+    public Long getId() {
         return id;
     }
     public Domicilio() {
     }
 
-    public Domicilio(int id, String calle, int numero, String localidad, String provincia) {
+    public Domicilio(Long id, String calle, int numero, String localidad, String provincia) {
         this.id = id;
         this.calle = calle;
         this.numero = numero;
@@ -26,7 +26,7 @@ public class Domicilio {
         this.localidad = localidad;
         this.provincia = provincia;
     }
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
