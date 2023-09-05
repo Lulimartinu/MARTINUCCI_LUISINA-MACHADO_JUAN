@@ -1,4 +1,4 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.service;
 
-public interface ITurnoService {
+public interface IPactienteService {
 }
