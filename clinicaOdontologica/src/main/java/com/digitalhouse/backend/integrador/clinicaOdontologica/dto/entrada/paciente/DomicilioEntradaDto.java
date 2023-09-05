@@ -1,4 +1,4 @@
-package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.domicilio;
+package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
