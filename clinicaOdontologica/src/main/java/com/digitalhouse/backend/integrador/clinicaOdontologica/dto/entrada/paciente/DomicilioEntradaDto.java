@@ -12,7 +12,7 @@ public class DomicilioEntradaDto {
     @NotNull(message = "La calle no puede ser nula")
     @NotBlank(message = "Debe completar con una calle")
     private String calle;
-    @NotNull(message = "El nro no puede ser nula")
+    @NotNull(message = "El nro no puede ser nulo")
     @NotBlank(message = "Debe completar con un numero")
     @Pattern(regexp = "\\d{1,8}", message = "El número debe tener como máximo 8 dígitos")
     private int numero;
