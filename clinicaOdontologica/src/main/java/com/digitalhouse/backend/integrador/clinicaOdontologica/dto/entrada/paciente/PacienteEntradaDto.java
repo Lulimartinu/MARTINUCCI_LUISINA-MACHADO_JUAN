@@ -10,7 +10,6 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-
 public class PacienteEntradaDto {
     @NotNull(message = "El nombre del paciente no puede ser nulo")
     @NotBlank(message = "Debe completar con un nombre")

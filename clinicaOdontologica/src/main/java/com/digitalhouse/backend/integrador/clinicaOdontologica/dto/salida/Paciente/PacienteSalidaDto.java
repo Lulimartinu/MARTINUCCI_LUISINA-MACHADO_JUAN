@@ -1,4 +1,4 @@
-package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida;
+package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.Paciente;
 
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Domicilio;
 
