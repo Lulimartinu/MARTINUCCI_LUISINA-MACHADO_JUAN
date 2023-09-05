@@ -36,7 +36,7 @@ public class DomicilioDaoH2 implements IDao<Domicilio> {
             ResultSet rs = ps.getGeneratedKeys();
             domicilio1 = new Domicilio(domicilio.getCalle(), domicilio.getNumero(), domicilio.getLocalidad(), domicilio.getProvincia());
             while (rs.next()) {
-                domicilio1.setId(rs.getInt("id"));
+                domicilio1.setId(rs.getLong("id"));
             }
 
             connection.commit();
@@ -81,7 +81,7 @@ public class DomicilioDaoH2 implements IDao<Domicilio> {
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                domicilio = new Domicilio(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
+                domicilio = new Domicilio(rs.getLong(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
             }
 
             if (domicilio == null) LOGGER.error("No se ha encontrado el domicilio con id: {}", id);
@@ -148,7 +148,7 @@ public class DomicilioDaoH2 implements IDao<Domicilio> {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM DOMICILIOS");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Domicilio domicilio = new Domicilio(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
+                Domicilio domicilio = new Domicilio(rs.getLong(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
                 domicilios.add(domicilio);
             }
             LOGGER.info("Listado de domicilios obtenido: " + domicilios);
