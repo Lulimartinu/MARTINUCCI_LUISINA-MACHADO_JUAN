@@ -47,20 +47,25 @@ public class OdontologoService implements IOdontologoService {
         Odontologo odontoBuscado = odontoRepository.findById(id).orElse(null);
 
         OdontologoSalidaDto odontologoSalidaDto = null;
-        if(odontologoSalidaDto != null){
+        if(odontoBuscado != null){
             odontologoSalidaDto = entidadADtoSalida(odontoBuscado);
             LOGGER.info("Se ha encontrado el Odontologo: {}", odontologoSalidaDto);
         }
-        else{
+        else
             LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
-        }
         return odontologoSalidaDto;
     }
 
 
     @Override
     public void eliminarOdontologoPorId(Long id) {
-
+        if(buscarOdontologoPorId(id) != null){
+            odontoRepository.deleteById(id);
+            LOGGER.warn("Se ha eliminado el Odontologo con el id: {}", id);
+        }
+        else {
+            LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
+        }
     }
 
     @Override
