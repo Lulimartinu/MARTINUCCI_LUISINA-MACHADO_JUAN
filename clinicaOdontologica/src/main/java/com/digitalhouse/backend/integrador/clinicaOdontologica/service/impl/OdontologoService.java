@@ -70,7 +70,17 @@ public class OdontologoService implements IOdontologoService {
 
     @Override
     public OdontologoSalidaDto actualizarOdontologo(OdontologoModificacionEntrada odontologoModificacionEntrada) {
-        return null;
+        Odontologo odontoAActualizar = dtoModificacionAEntidad(odontologoModificacionEntrada);
+        Odontologo odontoActualizado = odontoRepository.findById(odontoAActualizar.getId()).orElse(null);
+
+        OdontologoSalidaDto odontologoSalidaDto = null;
+        if(odontoAActualizar != null){
+            odontoRepository.save(odontoActualizado);
+            odontoActualizado = odontoAActualizar;
+            odontologoSalidaDto = entidadADtoSalida(odontoActualizado);
+            LOGGER.warn("Se ha actualizado el Odontologo: {}", odontoActualizado);
+        } else LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
+        return odontologoSalidaDto;
     }
 
     public Odontologo dtoEntradaAEntidad(OdontologoEntradaDto odontologoEntradaDto){
