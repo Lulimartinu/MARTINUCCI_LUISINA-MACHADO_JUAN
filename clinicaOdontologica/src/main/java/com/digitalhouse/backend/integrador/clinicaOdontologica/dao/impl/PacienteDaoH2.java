@@ -73,14 +73,14 @@ public class PacienteDaoH2 implements IDao<Paciente> {
     }
 
     @Override
-    public Paciente buscarPorId(int id) {
+    public Paciente buscarPorId(Long id) {
         Connection connection = null;
         Paciente paciente = null;
 
         try {
             connection = H2Connection.getConnection();
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM PACIENTES WHERE ID = ?");
-            ps.setInt(1, id);
+            ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 paciente = crearObjetoPaciente(rs);
@@ -107,14 +107,14 @@ public class PacienteDaoH2 implements IDao<Paciente> {
     }
 
     @Override
-    public void eliminar(int id) {
+    public void eliminar(Long id) {
         Connection connection = null;
         try {
             connection = H2Connection.getConnection();
             connection.setAutoCommit(false);
 
             PreparedStatement ps = connection.prepareStatement("DELETE FROM PACIENTES WHERE ID = ?");
-            ps.setInt(1, id);
+            ps.setLong(1, id);
             ps.execute();
             connection.commit();
             LOGGER.info("Se ha eliminado el paciente con id: {}", id);
@@ -186,8 +186,8 @@ public class PacienteDaoH2 implements IDao<Paciente> {
             ps.setString(2, pacienteModificado.getApellidoPaciente());
             ps.setInt(3, pacienteModificado.getDni());
             ps.setDate(4, Date.valueOf(pacienteModificado.getFechaIngreso()));
-            ps.setInt(5, pacienteModificado.getDomicilio().getId());
-            ps.setInt(6, pacienteModificado.getId());
+            ps.setLong(5, pacienteModificado.getDomicilio().getId());
+            ps.setLong(6, pacienteModificado.getId());
             ps.execute();
 
             LOGGER.warn("El paciente con id " + pacienteModificado.getId() + "ha sido modificado: " + pacienteModificado);
@@ -210,13 +210,13 @@ public class PacienteDaoH2 implements IDao<Paciente> {
     }
 
     private Paciente crearObjetoPaciente(ResultSet resultSet) throws SQLException {
-        int idPaciente = resultSet.getInt("id");
+        Long idPaciente = resultSet.getLong("id");
         String nombrePaciente = resultSet.getString("nombre");
         String apellidoPaciente = resultSet.getString("apellido");
         int dniPaciente = resultSet.getInt("dni");
         LocalDate fechaIngreso = resultSet.getDate("fecha").toLocalDate();
 
-        Domicilio domicilioPaciente = new DomicilioDaoH2().buscarPorId(resultSet.getInt("domicilio_id"));
+        Domicilio domicilioPaciente = new DomicilioDaoH2().buscarPorId(resultSet.getLong("domicilio_id"));
 
         return new Paciente(idPaciente, nombrePaciente, apellidoPaciente, dniPaciente,fechaIngreso, domicilioPaciente);}
 

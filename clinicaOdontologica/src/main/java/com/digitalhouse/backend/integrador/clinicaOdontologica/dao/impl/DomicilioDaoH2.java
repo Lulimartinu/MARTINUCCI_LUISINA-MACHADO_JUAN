@@ -70,14 +70,14 @@ public class DomicilioDaoH2 implements IDao<Domicilio> {
     }
 
     @Override
-    public Domicilio buscarPorId(int id) {
+    public Domicilio buscarPorId(Long id) {
         Domicilio domicilio = null;
         Connection connection = null;
         try {
             connection = H2Connection.getConnection();
 
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM DOMICILIOS WHERE ID = ?");
-            ps.setInt(1, id);
+            ps.setLong(1, id);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -102,13 +102,13 @@ public class DomicilioDaoH2 implements IDao<Domicilio> {
     }
 
     @Override
-    public void eliminar(int id) {
+    public void eliminar(Long id) {
         Connection connection = null;
         try {
             connection = H2Connection.getConnection();
             connection.setAutoCommit(false);
-            PreparedStatement ps = connection.prepareStatement("DELETE FROM DOMICILIOS WHERE ID = ?", id);
-            //ps.setInt(1, id);
+            PreparedStatement ps = connection.prepareStatement("DELETE FROM DOMICILIOS WHERE ID = ?");
+            ps.setLong(1, id);
             ps.execute();
             connection.commit();
             LOGGER.warn("Se ha eliminado el domicilio con id: {}", id);

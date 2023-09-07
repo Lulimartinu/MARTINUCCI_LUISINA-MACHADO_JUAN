@@ -38,7 +38,7 @@ public class TurnoDaoH2 implements IDao<Turno> {
     }
 
     @Override
-    public Turno buscarPorId(int id) {
+    public Turno buscarPorId(Long id) {
         //return (Turno) turnos.stream().filter(t -> t.getId() == id);
         Turno turnoBuscado = null;
         for (Turno t : turnos) {
@@ -57,7 +57,7 @@ public class TurnoDaoH2 implements IDao<Turno> {
 
     //eliminar
     @Override
-    public void eliminar(int id) {
+    public void eliminar(Long id) {
         Turno t = buscarPorId(id);
         if (t != null) {
             turnos.remove(t);

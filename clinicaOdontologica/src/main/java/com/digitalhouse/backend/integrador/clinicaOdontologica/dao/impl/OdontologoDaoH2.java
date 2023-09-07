@@ -73,18 +73,18 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
     }
 
     @Override
-    public Odontologo buscarPorId(int id) {
+    public Odontologo buscarPorId(Long id) {
         return null;
     }
 
     @Override
-    public void eliminar(int id) {
+    public void eliminar(Long id) {
         Connection connection = null;
         try {
             connection = H2Connection.getConnection();
             connection.setAutoCommit(false);
             PreparedStatement ps = connection.prepareStatement("DELETE FROM ODONTOLOGOS WHERE ID = ?");
-            ps.setInt(1, id);
+            ps.setLong(1, id);
             ps.execute();
             connection.commit();
             LOGGER.info("Se ha eliminado un odontologo");
