@@ -32,14 +32,14 @@ public class PacienteDaoH2 implements IDao<Paciente> {
             ps.setString(2, paciente.getApellidoPaciente());
             ps.setInt(3, paciente.getDni());
             ps.setDate(4, Date.valueOf(paciente.getFechaIngreso()));
-            ps.setInt(5, domicilio.getId());
+            ps.setLong(5, domicilio.getId());
             ps.execute();
 
             paciente1 = new Paciente(paciente.getNombrePaciente(), paciente.getApellidoPaciente(), paciente.getDni(), paciente.getFechaIngreso(), domicilio);
 
             ResultSet rs = ps.getGeneratedKeys();
             while (rs.next()) {
-                paciente1.setId(rs.getInt(1));
+                paciente1.setId(rs.getLong(1));
             }
 
             connection.commit();
