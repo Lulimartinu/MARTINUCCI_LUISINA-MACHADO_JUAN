@@ -3,7 +3,6 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modificacion.PacienteModificacionEntrada;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
-import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.OdontoRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.PacienteRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
 import org.modelmapper.ModelMapper;
@@ -23,9 +22,6 @@ public class PacienteService  implements IPacienteService {
 
     private final ModelMapper modelMapper;
 
-
-    public PacienteService() {
-    }
 
     public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
         this.pacienteRepository = pacienteRepository;
