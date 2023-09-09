@@ -25,7 +25,6 @@ public class PacienteEntradaDto {
 
     private LocalDate fechaIngreso;
     @NotNull(message = "El Domicilio  no puede ser nula")
-    @NotBlank(message = "Debe completar con un Domicilio")
     private Domicilio domicilio;
 
     public PacienteEntradaDto() {
