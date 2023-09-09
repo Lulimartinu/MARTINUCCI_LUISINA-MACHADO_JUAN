@@ -1,13 +1,27 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.entity;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name="PACIENTES", uniqueConstraints = { @UniqueConstraint(columnNames = {"dni"})})
 public class Paciente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(length = 50)
     private String nombrePaciente;
+    @Column(length = 50)
     private String apellidoPaciente;
+    @Column(unique = true)
     private int dni;
     private LocalDate fechaIngreso;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
 
 
