@@ -48,8 +48,8 @@ public class TurnoService implements ITurnoService {
     public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) {
         TurnoSalidaDto turnoSalidaDto= null ;
 
-      PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPaciente().getId());
-      OdontologoSalidaDto odontologo = odontologoService.buscarOdontologoPorId(turno.getOdontologo().getId());
+      PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPacienteId());
+      OdontologoSalidaDto odontologo = odontologoService.buscarOdontologoPorId(turno.getOdontologoId());
 
 
         if (paciente == null || odontologo == null) {

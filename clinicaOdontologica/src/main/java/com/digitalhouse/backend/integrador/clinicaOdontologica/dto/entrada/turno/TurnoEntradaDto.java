@@ -13,28 +13,28 @@ import java.time.LocalDateTime;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TurnoEntradaDto {
     @NotNull(message = "El Odontologo no puede ser nulo")
-    private Odontologo odontologo;
+    private Long odontologoId;
     @NotNull(message = "El Paciente no puede ser nulo")
-    private Paciente paciente;
+    private Long pacienteId;
     @NotNull(message = "Debe ingresar una fecha y hora deseada")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
     private LocalDateTime fechaYHora;
 
-    public Odontologo getOdontologo() {
-        return odontologo;
+    public Long getOdontologoId() {
+        return odontologoId;
     }
 
-    public void setOdontologo(Odontologo odontologo) {
-        this.odontologo = odontologo;
+    public void setOdontologoId(Long odontologoId) {
+        this.odontologoId = odontologoId;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public Long getPacienteId() {
+        return pacienteId;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPacienteId(Long pacienteId) {
+        this.pacienteId = pacienteId;
     }
 
     public LocalDateTime getFechaYHora() {
