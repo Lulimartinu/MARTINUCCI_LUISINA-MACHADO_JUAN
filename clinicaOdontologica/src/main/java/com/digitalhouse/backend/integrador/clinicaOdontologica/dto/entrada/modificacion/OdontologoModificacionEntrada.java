@@ -9,20 +9,20 @@ public class OdontologoModificacionEntrada {
     @NotNull()
     private int id;
     @NotNull()
-    private int numeroMatricula;
+    private String numeroMatricula;
     @NotNull()
-    private String nombre;
+    private String nombreOdontologo;
     @NotNull()
-    private String apellido;
+    private String apellidoOdontologo;
 
     public OdontologoModificacionEntrada() {
     }
 
-    public OdontologoModificacionEntrada(int id, int numeroMatricula, String nombre, String apellido) {
+    public OdontologoModificacionEntrada(int id, String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.id = id;
         this.numeroMatricula = numeroMatricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 
     public int getId() {
@@ -33,27 +33,27 @@ public class OdontologoModificacionEntrada {
         this.id = id;
     }
 
-    public int getNumeroMatricula() {
+    public String getNumeroMatricula() {
         return numeroMatricula;
     }
 
-    public void setNumeroMatricula(int numeroMatricula) {
+    public void setNumeroMatricula(String numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreOdontologo() {
+        return nombreOdontologo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreOdontologo(String nombreOdontologo) {
+        this.nombreOdontologo = nombreOdontologo;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellidoOdontologo() {
+        return apellidoOdontologo;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellidoOdontologo(String apellidoOdontologo) {
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 }

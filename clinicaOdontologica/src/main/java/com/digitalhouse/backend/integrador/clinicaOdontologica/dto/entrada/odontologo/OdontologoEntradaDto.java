@@ -44,19 +44,19 @@ public class OdontologoEntradaDto {
         this.numeroMatricula = numeroMatricula;
     }
 
-    public String getNombre() {
+    public String getNombreOdontologo() {
         return nombreOdontologo;
     }
 
-    public void setNombre(String nombreOdontologo) {
+    public void setNombreOdontologo(String nombreOdontologo) {
         this.nombreOdontologo = nombreOdontologo;
     }
 
-    public String getApellido() {
+    public String getApellidoOdontologo() {
         return apellidoOdontologo;
     }
 
-    public void setApellido(String apellidoOdontologo) {
+    public void setApellidoOdontologo(String apellidoOdontologo) {
         this.apellidoOdontologo = apellidoOdontologo;
     }
 }
