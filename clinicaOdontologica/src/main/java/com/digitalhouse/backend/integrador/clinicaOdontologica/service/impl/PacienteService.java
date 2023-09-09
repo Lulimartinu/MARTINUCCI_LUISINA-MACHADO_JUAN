@@ -4,7 +4,6 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modif
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Paciente;
-import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.OdontoRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.PacienteRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
 import org.modelmapper.ModelMapper;
@@ -17,17 +16,17 @@ import java.util.List;
 @Service
 public class PacienteService  implements IPacienteService {
 
-        private final Logger LOGGER = LoggerFactory.getLogger(com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl.PacienteService.class);
+        private final Logger LOGGER = LoggerFactory.getLogger(PacienteService.class);
 
         private final PacienteRepository pacienteRepository;
 
         private final ModelMapper modelMapper;
 
-
-        public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
-            this.pacienteRepository = pacienteRepository;
-            this.modelMapper = modelMapper;
-        }
+    public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
+        this.pacienteRepository = pacienteRepository;
+        this.modelMapper = modelMapper;
+        configureMapping();
+    }
 
         @Override
         public List<PacienteSalidaDto> detallarPacientes() {
