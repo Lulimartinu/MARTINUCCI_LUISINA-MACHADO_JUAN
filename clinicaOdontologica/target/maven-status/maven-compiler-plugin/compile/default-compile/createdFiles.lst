@@ -12,6 +12,7 @@ com\digitalhouse\backend\integrador\clinicaOdontologica\dao\impl\OdontologoDaoH2
 com\digitalhouse\backend\integrador\clinicaOdontologica\controller\OdontologoController.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\PacienteModificacionEntrada.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\service\IOdontologoService.class
+com\digitalhouse\backend\integrador\clinicaOdontologica\controller\TurnoController.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\DomicilioModificacionEntrada.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\paciente\PacienteEntradaDto.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\OdontologoModificacionEntrada.class
