@@ -1,10 +1,20 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.entity;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "TURNOS")
+
 public class Turno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "odontologo_id")
     private Odontologo odontologo;
+    @ManyToOne
+    @JoinColumn(name ="paciente_id")
     private Paciente paciente;
     private LocalDateTime fechaYHora;
 
