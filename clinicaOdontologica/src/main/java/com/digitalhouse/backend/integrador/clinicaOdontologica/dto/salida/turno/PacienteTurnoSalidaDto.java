@@ -1,5 +1,9 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.turno;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PacienteTurnoSalidaDto {
     private Long id;
     private String nombrePaciente;
@@ -36,5 +40,14 @@ public class PacienteTurnoSalidaDto {
 
     public void setApellidoPaciente(String apellidoPaciente) {
         this.apellidoPaciente = apellidoPaciente;
+    }
+
+    @Override
+    public String toString() {
+        return "PacienteTurnoSalidaDto{" +
+                "id=" + id +
+                ", nombrePaciente='" + nombrePaciente + '\'' +
+                ", apellidoPaciente='" + apellidoPaciente + '\'' +
+                '}';
     }
 }
