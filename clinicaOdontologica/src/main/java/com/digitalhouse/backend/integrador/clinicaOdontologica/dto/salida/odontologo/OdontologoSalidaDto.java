@@ -2,9 +2,9 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.odont
 
 public class OdontologoSalidaDto {
     private Long id;
-    private int numeroMatricula;
-    private String nombre;
-    private String apellido;
+    private String numeroMatricula;
+    private String nombreOdontologo;
+    private String apellidoOdontologo;
 
     public Long getId() {
         return id;
@@ -14,37 +14,37 @@ public class OdontologoSalidaDto {
         this.id = id;
     }
 
-    public int getNumeroMatricula() {
+    public String getNumeroMatricula() {
         return numeroMatricula;
     }
 
-    public void setNumeroMatricula(int numeroMatricula) {
+    public void setNumeroMatricula(String numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
     }
 
     public String getNombre() {
-        return nombre;
+        return nombreOdontologo;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombreOdontologo = nombreOdontologo;
     }
 
     public String getApellido() {
-        return apellido;
+        return apellidoOdontologo;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 
     public OdontologoSalidaDto() {
     }
 
-    public OdontologoSalidaDto(Long id, int numeroMatricula, String nombre, String apellido) {
+    public OdontologoSalidaDto(Long id, String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.id = id;
         this.numeroMatricula = numeroMatricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 }
