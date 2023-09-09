@@ -11,7 +11,6 @@ import javax.validation.constraints.Size;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OdontologoEntradaDto {
     @NotNull(message = "Numero Matricula no puede ser nulo")
-    @NotBlank(message = "Debe tener numero matricula")
     @Pattern(regexp = "^[A-Z]{2}-\\d{1,3}\\d*$")
     @Size(min = 10, message = "La matricula debe tener 10 caracteres mínimo")
     @Size(max = 12,message = "La matricula debe tener 12 caracteres Maximo")
