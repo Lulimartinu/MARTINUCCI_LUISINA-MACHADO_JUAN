@@ -20,7 +20,6 @@ public class PacienteEntradaDto {
     @NotNull(message = "El dni del paciente no puede ser nulo")
     private int dni;
     @NotNull(message = "La fecha de ingreso no puede ser nula")
-    @NotBlank(message = "Debe completar con una fecha de ingreso")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
 
