@@ -18,7 +18,6 @@ public class PacienteEntradaDto {
     @NotBlank(message = "Debe completar con un apellido")
     private String apellidoPaciente;
     @NotNull(message = "El dni del paciente no puede ser nulo")
-    @NotBlank(message = "Debe completar con un dni")
     private int dni;
     @NotNull(message = "La fecha de ingreso no puede ser nula")
     @NotBlank(message = "Debe completar con una fecha de ingreso")
