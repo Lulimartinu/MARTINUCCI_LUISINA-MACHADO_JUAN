@@ -10,7 +10,7 @@ public class Odontologo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private int numeroMatricula;
+    private String numeroMatricula;
     @Column(length = 50)
     private String nombreOdontologo;
     @Column(length = 50)
@@ -20,14 +20,14 @@ public class Odontologo {
     public Odontologo() {
     }
 
-    public Odontologo(Long id, int numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
+    public Odontologo(Long id, String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.id = id;
         this.numeroMatricula = numeroMatricula;
         this.nombreOdontologo = nombreOdontologo;
         this.apellidoOdontologo = apellidoOdontologo;
     }
 
-    public Odontologo(int numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
+    public Odontologo(String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.numeroMatricula = numeroMatricula;
         this.nombreOdontologo = nombreOdontologo;
         this.apellidoOdontologo = apellidoOdontologo;
@@ -41,11 +41,11 @@ public class Odontologo {
         this.id = id;
     }
 
-    public int getNumeroMatricula() {
+    public String getNumeroMatricula() {
         return this.numeroMatricula;
     }
 
-    public void setNumeroMatricula(int numeroMatricula) {
+    public void setNumeroMatricula(String numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
     }
 

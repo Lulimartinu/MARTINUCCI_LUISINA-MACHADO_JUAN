@@ -14,7 +14,7 @@ public class OdontologoEntradaDto {
     @Pattern(regexp = "^[A-Z]{2}-\\d{1,3}\\d*$")
     @Size(min = 10, message = "La matricula debe tener 10 caracteres mínimo")
     @Size(max = 12,message = "La matricula debe tener 12 caracteres Maximo")
-    private int numeroMatricula;
+    private String numeroMatricula;
 
     @NotBlank(message = "Odontologo debe tener nombre")
     @NotNull(message = "Nombre de odontologo no puede ser nulo")
@@ -26,7 +26,7 @@ public class OdontologoEntradaDto {
     @Size(max = 50,message = "El apellido odontologo debe tener maximo 50 caracteres")
     private String apellido;
 
-    public OdontologoEntradaDto(int numeroMatricula, String nombre, String apellido) {
+    public OdontologoEntradaDto(String numeroMatricula, String nombre, String apellido) {
 
         this.numeroMatricula = numeroMatricula;
         this.nombre = nombre;
@@ -36,11 +36,11 @@ public class OdontologoEntradaDto {
     public OdontologoEntradaDto() {
     }
 
-    public int getNumeroMatricula() {
+    public String getNumeroMatricula() {
         return numeroMatricula;
     }
 
-    public void setNumeroMatricula(int numeroMatricula) {
+    public void setNumeroMatricula(String numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
     }
 
