@@ -17,6 +17,7 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.service.ITurnoSer
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,12 +32,14 @@ public class TurnoService implements ITurnoService {
 
 
 
+    @Autowired
     public TurnoService(TurnoRepository turnoRepository, ModelMapper modelMapper, OdontologoService odontologoService, PacienteService pacienteService) {
         this.turnoRepository = turnoRepository;
         this.modelMapper = modelMapper;
         this.odontologoService = odontologoService;
         this.pacienteService = pacienteService;
     }
+
 
 
     @Override
