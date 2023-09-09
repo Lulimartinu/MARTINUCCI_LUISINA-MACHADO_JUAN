@@ -28,7 +28,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
             connection = H2Connection.getConnection();
             connection.setAutoCommit(false);
             PreparedStatement ps = connection.prepareStatement(insert, 1);
-            ps.setInt(1, odontologo.getNumeroMatricula());
+            ps.setString(1, odontologo.getNumeroMatricula());
             ps.setString(2, odontologo.getNombre());
             ps.setString(3, odontologo.getApellido());
             ps.execute();
@@ -120,7 +120,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
                 ResultSet rs = ps.executeQuery();
 
                 while (rs.next()) {
-                    Odontologo odontologo = new Odontologo(rs.getLong(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+                    Odontologo odontologo = new Odontologo(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4));
                     odontologos.add(odontologo);
                 }
 
