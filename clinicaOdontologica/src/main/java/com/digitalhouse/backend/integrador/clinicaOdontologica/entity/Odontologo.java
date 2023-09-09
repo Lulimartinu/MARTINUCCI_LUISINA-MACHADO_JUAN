@@ -12,25 +12,25 @@ public class Odontologo {
     @Column(unique = true)
     private int numeroMatricula;
     @Column(length = 50)
-    private String nombre;
+    private String nombreOdontologo;
     @Column(length = 50)
-    private String apellido;
+    private String apellidoOdontologo;
 
 
     public Odontologo() {
     }
 
-    public Odontologo(Long id, int numeroMatricula, String nombre, String apellido) {
+    public Odontologo(Long id, int numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.id = id;
         this.numeroMatricula = numeroMatricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 
-    public Odontologo(int numeroMatricula, String nombre, String apellido) {
+    public Odontologo(int numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.numeroMatricula = numeroMatricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 
     public Long getId() {
@@ -50,22 +50,22 @@ public class Odontologo {
     }
 
     public String getNombre() {
-        return this.nombre;
+        return this.nombreOdontologo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String nombreOdontologo) {
+        this.nombreOdontologo = nombreOdontologo;
     }
 
     public String getApellido() {
-        return this.apellido;
+        return this.apellidoOdontologo;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellido(String apellidoOdontologo) {
+        this.apellidoOdontologo = apellidoOdontologo;
     }
 
     public String toString() {
-        return "\nID: " + this.id + "\nNumero Matricula: " + this.numeroMatricula + "\nNombre: " + this.nombre + "\nApellido: " + this.apellido + "\n-----------------------";
+        return "\nID: " + this.id + "\nNumero Matricula: " + this.numeroMatricula + "\nNombre: " + this.nombreOdontologo + "\nApellido: " + this.apellidoOdontologo + "\n-----------------------";
     }
 }
