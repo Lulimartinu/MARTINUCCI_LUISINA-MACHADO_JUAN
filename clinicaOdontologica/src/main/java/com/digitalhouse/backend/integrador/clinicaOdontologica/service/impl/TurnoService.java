@@ -1,6 +1,8 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl;
 
+import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modificacion.PacienteModificacionEntrada;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modificacion.TurnoModificacionEntrada;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.turno.TurnoEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.odontologo.OdontologoSalidaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
@@ -50,7 +52,6 @@ public class TurnoService implements ITurnoService {
 
       PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPacienteId());
       OdontologoSalidaDto odontologo = odontologoService.buscarOdontologoPorId(turno.getOdontologoId());
-
 
         if (paciente == null || odontologo == null) {
             if (paciente == null && odontologo == null) {
@@ -117,6 +118,19 @@ public class TurnoService implements ITurnoService {
         return turnoSalidaDto;
     }
 
+    private void configureMapping() {
+        // Mapeo de TurnoEntradaDto a Turno
+        modelMapper.typeMap(TurnoEntradaDto.class, Turno.class)
+                .addMapping(TurnoEntradaDto::getPacienteId, Turno::setPaciente)
+                .addMapping(TurnoEntradaDto::getOdontologoId, Turno::setOdontologo);
+
+        // Mapeo de Turno a TurnoSalidaDto
+        modelMapper.typeMap(Turno.class, TurnoSalidaDto.class)
+                .addMapping(Turno::getPaciente, TurnoSalidaDto::setPacienteTurnoSalidaDto)
+                .addMapping(Turno::getOdontologo, TurnoSalidaDto::setOdontoTurnoSalidaDto);
+    }
+
+
     private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id) {
         return modelMapper.map(pacienteService.buscarPacientePorId(id), PacienteTurnoSalidaDto.class);
     }
@@ -130,7 +144,5 @@ public class TurnoService implements ITurnoService {
         turnoSalidaDto.setPacienteTurnoSalidaDto(pacSalDtoASalTurnoDto(turno.getPaciente().getId()));
         turnoSalidaDto.setOdontoTurnoSalidaDto(odontoSalDtoASalTurnoDto(turno.getOdontologo().getId()));
         return turnoSalidaDto;
-
 }
-
 }
