@@ -5,6 +5,7 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modif
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.odontologo.OdontologoEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.odontologo.OdontologoSalidaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Odontologo;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.OdontoRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IOdontologoService;
 import org.h2.engine.Mode;
@@ -58,18 +59,19 @@ public class OdontologoService implements IOdontologoService {
 
 
     @Override
-    public void eliminarOdontologoPorId(Long id) {
+    public void eliminarOdontologoPorId(Long id) throws ResourceNotFoundException {
         if(buscarOdontologoPorId(id) != null){
             odontoRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el Odontologo con el id: {}", id);
         }
         else {
             LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
+            throw new ResourceNotFoundException("No se ha encontrado un Odontologo en la BDD con ese id");
         }
     }
 
     @Override
-    public OdontologoSalidaDto actualizarOdontologo(OdontologoModificacionEntrada odontologoModificacionEntrada) {
+    public OdontologoSalidaDto actualizarOdontologo(OdontologoModificacionEntrada odontologoModificacionEntrada) throws ResourceNotFoundException{
         Odontologo odontoAActualizar = dtoModificacionAEntidad(odontologoModificacionEntrada);
         Odontologo odontoActualizado = odontoRepository.findById(odontoAActualizar.getId()).orElse(null);
 
@@ -79,7 +81,10 @@ public class OdontologoService implements IOdontologoService {
             odontoActualizado = odontoAActualizar;
             odontologoSalidaDto = entidadADtoSalida(odontoActualizado);
             LOGGER.warn("Se ha actualizado el Odontologo: {}", odontoActualizado);
-        } else LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
+        } else {
+            LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
+            throw new ResourceNotFoundException("No se ha encontrado un Odontologo en la BDD con ese id");
+        }
         return odontologoSalidaDto;
     }
 

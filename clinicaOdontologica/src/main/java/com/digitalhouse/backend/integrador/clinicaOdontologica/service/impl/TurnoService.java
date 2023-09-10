@@ -143,7 +143,7 @@ public class TurnoService implements ITurnoService {
     }
 
 
-    private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id) throws ResourceNotFoundException {
+    private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id)  {
         return modelMapper.map(pacienteService.buscarPacientePorId(id), PacienteTurnoSalidaDto.class);
     }
 
@@ -151,10 +151,11 @@ public class TurnoService implements ITurnoService {
         return modelMapper.map(odontologoService.buscarOdontologoPorId(id), OdontoTurnoSalidaDto.class);
     }
 
-    private TurnoSalidaDto entidadADto(Turno turno) throws ResourceNotFoundException {
+    private TurnoSalidaDto entidadADto(Turno turno)  {
         TurnoSalidaDto turnoSalidaDto = modelMapper.map(turno, TurnoSalidaDto.class);
         turnoSalidaDto.setPacienteTurnoSalidaDto(pacSalDtoASalTurnoDto(turno.getPaciente().getId()));
         turnoSalidaDto.setOdontoTurnoSalidaDto(odontoSalDtoASalTurnoDto(turno.getOdontologo().getId()));
         return turnoSalidaDto;
-}
+                                }
+
 }

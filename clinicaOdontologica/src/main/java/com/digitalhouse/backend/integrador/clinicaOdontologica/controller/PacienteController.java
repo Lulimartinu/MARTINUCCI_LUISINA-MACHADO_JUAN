@@ -3,6 +3,7 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.controller;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modificacion.PacienteModificacionEntrada;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.BadRequestException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl.PacienteService;
@@ -26,7 +27,7 @@ public class PacienteController {
     }
 
     @PostMapping("/crear")
-    public ResponseEntity<PacienteSalidaDto> crearPaciente(@Valid @RequestBody PacienteEntradaDto paciente) {
+    public ResponseEntity<PacienteSalidaDto> crearPaciente(@Valid @RequestBody PacienteEntradaDto paciente) throws BadRequestException {
         return new ResponseEntity<>(pacienteService.crearPaciente(paciente), HttpStatus.CREATED);
     }
 

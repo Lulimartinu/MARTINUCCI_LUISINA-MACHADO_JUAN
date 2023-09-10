@@ -38,7 +38,7 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public PacienteSalidaDto crearPaciente(PacienteEntradaDto paciente) {
+        public PacienteSalidaDto crearPaciente(PacienteEntradaDto paciente) throws BadRequestException{
             Paciente pacienteGuardado = pacienteRepository.save(dtoEntradaAEntidad(paciente));
             PacienteSalidaDto pacienteSalidaDto = entidadADtoSalida(pacienteGuardado);
             LOGGER.info("Se ha creado un nuevo Paciente : {}", pacienteSalidaDto);
@@ -58,7 +58,7 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException{
+        public PacienteSalidaDto buscarPacientePorId(Long id){
             Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
             PacienteSalidaDto pacienteSalidaDto = null;
 
@@ -66,8 +66,7 @@ public class PacienteService  implements IPacienteService {
                 pacienteSalidaDto = entidadADtoSalida(pacienteBuscado);
                 LOGGER.info("Se ha encontrado el Paciente: {}", pacienteSalidaDto);
             } else
-            {LOGGER.error("No se ha encontrado un Paciente en la BDD con ese id");
-                throw new ResourceNotFoundException("No se ha encontrado un Paciente en la BDD con ese id");}
+            {LOGGER.error("No se ha encontrado un Paciente en la BDD con ese id");}
 
             return pacienteSalidaDto;
         }
