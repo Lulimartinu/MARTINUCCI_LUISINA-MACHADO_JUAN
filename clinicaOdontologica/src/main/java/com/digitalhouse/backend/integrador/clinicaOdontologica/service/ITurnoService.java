@@ -10,7 +10,7 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.Resourc
 import java.util.List;
 
 public interface ITurnoService {
-    List<TurnoSalidaDto> detallarTurnos() throws ResourceNotFoundException;
+    List<TurnoSalidaDto> detallarTurnos() ;
 
     TurnoSalidaDto crearTurno(TurnoEntradaDto turno) throws BadRequestException;
     void eliminarTurnoPorId(Long id) throws ResourceNotFoundException;

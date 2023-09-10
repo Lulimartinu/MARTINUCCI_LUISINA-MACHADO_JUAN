@@ -1,6 +1,5 @@
 com\digitalhouse\backend\integrador\clinicaOdontologica\service\impl\PacienteService.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dao\H2Connection.class
-com\digitalhouse\backend\integrador\clinicaOdontologica\dao\impl\PacienteDaoH2.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\salida\turno\TurnoSalidaDto.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\repository\OdontoRepository.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\repository\PacienteRepository.class
@@ -9,7 +8,6 @@ com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\odontologo\O
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\salida\turno\OdontoTurnoSalidaDto.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\entity\Domicilio.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\exception\ResourceNotFoundException.class
-com\digitalhouse\backend\integrador\clinicaOdontologica\dao\impl\OdontologoDaoH2.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\controller\OdontologoController.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\PacienteModificacionEntrada.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\service\IOdontologoService.class
@@ -17,7 +15,6 @@ com\digitalhouse\backend\integrador\clinicaOdontologica\controller\TurnoControll
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\DomicilioModificacionEntrada.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\paciente\PacienteEntradaDto.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\OdontologoModificacionEntrada.class
-com\digitalhouse\backend\integrador\clinicaOdontologica\dao\impl\TurnoDaoH2.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\TurnoModificacionEntrada.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\salida\paciente\PacienteSalidaDto.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\exception\BadRequestException.class
@@ -32,7 +29,6 @@ com\digitalhouse\backend\integrador\clinicaOdontologica\repository\TurnoReposito
 com\digitalhouse\backend\integrador\clinicaOdontologica\service\IPacienteService.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\entity\Turno.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\entity\Odontologo.class
-com\digitalhouse\backend\integrador\clinicaOdontologica\dao\impl\DomicilioDaoH2.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\dto\salida\turno\PacienteTurnoSalidaDto.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\ClinicaOdontologicaApplication.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\service\ITurnoService.class

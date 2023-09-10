@@ -45,7 +45,7 @@ public class TurnoService implements ITurnoService {
 
 
     @Override
-    public List<TurnoSalidaDto> detallarTurnos() throws ResourceNotFoundException{
+    public List<TurnoSalidaDto> detallarTurnos() {
         List<TurnoSalidaDto> turnos = turnoRepository.findAll().stream().map(this::entidadADto).toList();
         LOGGER.info("lista de todos los turnos disponibles :{} ", turnos);
         return turnos;
@@ -127,6 +127,22 @@ public class TurnoService implements ITurnoService {
         return turnoSalidaDto;
     }
 
+
+    private PacienteTurnoSalidaDto pacienteSalidaDtoASalidaTurnoDto(Long id) {
+        return modelMapper.map(pacienteService.buscarPacientePorId(id), PacienteTurnoSalidaDto.class);
+    }
+
+    private OdontoTurnoSalidaDto odontologoSalidaDtoASalidaTurnoDto(Long id) {
+        return modelMapper.map(odontologoService.buscarOdontologoPorId(id), OdontoTurnoSalidaDto.class);
+    }
+
+    private TurnoSalidaDto entidadADto(Turno turno) {
+        TurnoSalidaDto turnoSalidaDto = modelMapper.map(turno, TurnoSalidaDto.class);
+        turnoSalidaDto.setPacienteTurnoSalidaDto(pacienteSalidaDtoASalidaTurnoDto(turno.getPaciente().getId()));
+        turnoSalidaDto.setOdontoTurnoSalidaDto(odontologoSalidaDtoASalidaTurnoDto(turno.getOdontologo().getId()));
+        return turnoSalidaDto;
+    }
+
     /*
     private void configureMapping() {
 
@@ -140,6 +156,7 @@ public class TurnoService implements ITurnoService {
     }*/
 
 
+    /*
     private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id)  {
         return modelMapper.map(pacienteService.buscarPacientePorId(id), PacienteTurnoSalidaDto.class);
     }
@@ -155,4 +172,5 @@ public class TurnoService implements ITurnoService {
         return turnoSalidaDto;
                                 }
 
+*/
 }
