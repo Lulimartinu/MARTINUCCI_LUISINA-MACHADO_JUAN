@@ -27,6 +27,7 @@ window.addEventListener('load',function(){
             }
             
         }
+        console.log(payload)
 
         let settings = {
             method : "POST",
@@ -46,31 +47,10 @@ window.addEventListener('load',function(){
             console.log("algunos de los datos es incorrecto");
             return Promise.reject(response)
         })
-        .then(data => {
-            console.log("Promesa cumplida... ");
-            console.log(data);
-            if (data.jwt) {
-               
-                localStorage.setItem("jwt", JSON.stringify(data.jwt))
-
-                location.replace("./mis-tareas.html")
-            }
-        })
-        .catch(err => {
-            console.log(err);
-            if (err.status == 400) {
-                console.warn("Contraseña incorrecta")
-                alert("Contraseña incorrecta")
-            } else if (err.status == 404) {
-                console.warn("El usuario no existe")
-                alert("El usuario no existe")
-            } else {
-                console.error("Error del servidor | url no existe")
-                alert("Error del servidor | url no existe")
-            }
-})
+        
     }
-})  
+})
+
 
 
 
