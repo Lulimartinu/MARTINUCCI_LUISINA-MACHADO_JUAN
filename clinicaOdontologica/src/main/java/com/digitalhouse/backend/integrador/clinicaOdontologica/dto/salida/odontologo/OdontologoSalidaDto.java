@@ -6,6 +6,16 @@ public class OdontologoSalidaDto {
     private String nombreOdontologo;
     private String apellidoOdontologo;
 
+    public OdontologoSalidaDto() {
+    }
+
+    public OdontologoSalidaDto(Long id, String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
+        this.id = id;
+        this.numeroMatricula = numeroMatricula;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
+    }
+
     public Long getId() {
         return id;
     }
@@ -38,13 +48,13 @@ public class OdontologoSalidaDto {
         this.apellidoOdontologo = apellidoOdontologo;
     }
 
-    public OdontologoSalidaDto() {
-    }
-
-    public OdontologoSalidaDto(Long id, String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
-        this.id = id;
-        this.numeroMatricula = numeroMatricula;
-        this.nombreOdontologo = nombreOdontologo;
-        this.apellidoOdontologo = apellidoOdontologo;
+    @Override
+    public String toString() {
+        return "OdontologoSalidaDto{" +
+                "id=" + id +
+                ", numeroMatricula='" + numeroMatricula + '\'' +
+                ", nombreOdontologo='" + nombreOdontologo + '\'' +
+                ", apellidoOdontologo='" + apellidoOdontologo + '\'' +
+                '}';
     }
 }

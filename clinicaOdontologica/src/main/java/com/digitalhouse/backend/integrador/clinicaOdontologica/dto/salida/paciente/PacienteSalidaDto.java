@@ -10,7 +10,18 @@ public class PacienteSalidaDto {
     private String apellidoPaciente;
     private int dni;
     private LocalDate fechaIngreso;
-    private Domicilio domicilio;
+    private DomicilioSalidaDto domicilio;
+    public PacienteSalidaDto() {
+    }
+
+    public PacienteSalidaDto(Long id, String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, DomicilioSalidaDto domicilio) {
+        this.id = id;
+        this.nombrePaciente = nombrePaciente;
+        this.apellidoPaciente = apellidoPaciente;
+        this.dni = dni;
+        this.fechaIngreso = fechaIngreso;
+        this.domicilio = domicilio;
+    }
 
     public Long getId() {
         return id;
@@ -52,23 +63,23 @@ public class PacienteSalidaDto {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public Domicilio getDomicilio() {
+    public DomicilioSalidaDto getDomicilio() {
         return domicilio;
     }
 
-    public void setDomicilio(Domicilio domicilio) {
+    public void setDomicilio(DomicilioSalidaDto domicilio) {
         this.domicilio = domicilio;
     }
 
-    public PacienteSalidaDto() {
-    }
-
-    public PacienteSalidaDto(Long id, String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
-        this.id = id;
-        this.nombrePaciente = nombrePaciente;
-        this.apellidoPaciente = apellidoPaciente;
-        this.dni = dni;
-        this.fechaIngreso = fechaIngreso;
-        this.domicilio = domicilio;
+    @Override
+    public String toString() {
+        return "PacienteSalidaDto{" +
+                "id=" + id +
+                ", nombrePaciente='" + nombrePaciente + '\'' +
+                ", apellidoPaciente='" + apellidoPaciente + '\'' +
+                ", dni=" + dni +
+                ", fechaIngreso=" + fechaIngreso +
+                ", domicilio=" + domicilio +
+                '}';
     }
 }

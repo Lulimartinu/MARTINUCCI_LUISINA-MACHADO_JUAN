@@ -11,6 +11,9 @@ public class TurnoSalidaDto {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime fechaYHora;
 
+    public TurnoSalidaDto() {
+    }
+
     public TurnoSalidaDto(Long id, PacienteTurnoSalidaDto pacienteTurnoSalidaDto, OdontoTurnoSalidaDto odontoTurnoSalidaDto, LocalDateTime fechaYHora) {
         this.id = id;
         this.pacienteTurnoSalidaDto = pacienteTurnoSalidaDto;

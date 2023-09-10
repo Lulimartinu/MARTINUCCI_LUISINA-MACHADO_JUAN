@@ -6,6 +6,16 @@ public class DomicilioSalidaDto {
     private int numero;
     private String localidad;
     private String provincia;
+    public DomicilioSalidaDto() {
+    }
+
+    public DomicilioSalidaDto(Long id, String calle, int numero, String localidad, String provincia) {
+        this.id = id;
+        this.calle = calle;
+        this.numero = numero;
+        this.localidad = localidad;
+        this.provincia = provincia;
+    }
 
     public Long getId() {
         return id;
@@ -47,14 +57,14 @@ public class DomicilioSalidaDto {
         this.provincia = provincia;
     }
 
-    public DomicilioSalidaDto() {
-    }
-
-    public DomicilioSalidaDto(Long id, String calle, int numero, String localidad, String provincia) {
-        this.id = id;
-        this.calle = calle;
-        this.numero = numero;
-        this.localidad = localidad;
-        this.provincia = provincia;
+    @Override
+    public String toString() {
+        return "DomicilioSalidaDto{" +
+                "id=" + id +
+                ", calle='" + calle + '\'' +
+                ", numero=" + numero +
+                ", localidad='" + localidad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                '}';
     }
 }

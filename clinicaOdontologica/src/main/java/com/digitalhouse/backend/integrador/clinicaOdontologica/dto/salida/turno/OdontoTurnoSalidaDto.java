@@ -12,6 +12,12 @@ public class OdontoTurnoSalidaDto {
     public OdontoTurnoSalidaDto() {
     }
 
+    public OdontoTurnoSalidaDto(Long id, String nombreOdontologo, String apellidoOdontologo) {
+        this.id = id;
+        this.nombreOdontologo = nombreOdontologo;
+        this.apellidoOdontologo = apellidoOdontologo;
+    }
+
     public Long getId() {
         return id;
     }
