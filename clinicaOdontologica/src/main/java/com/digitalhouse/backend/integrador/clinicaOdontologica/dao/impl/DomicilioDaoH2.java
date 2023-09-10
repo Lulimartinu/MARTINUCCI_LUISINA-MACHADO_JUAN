@@ -12,7 +12,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+/*
 public class DomicilioDaoH2 implements IDao<Domicilio> {
 
     private final Logger LOGGER = LoggerFactory.getLogger(DomicilioDaoH2.class);
@@ -177,3 +177,4 @@ public class DomicilioDaoH2 implements IDao<Domicilio> {
 
 }
 
+*/

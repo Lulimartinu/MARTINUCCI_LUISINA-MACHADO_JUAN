@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+/*
 public class OdontologoDaoH2 implements IDao<Odontologo> {
     private final Logger LOGGER = LoggerFactory.getLogger(OdontologoDaoH2.class);
 
@@ -149,4 +149,4 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
 
 }
 
-
+*/

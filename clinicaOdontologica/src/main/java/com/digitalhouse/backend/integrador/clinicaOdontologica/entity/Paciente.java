@@ -23,7 +23,7 @@ public class Paciente {
     private Domicilio domicilio;
 
 
-    public Paciente(Long idPaciente, String nombrePaciente, String apellidoPaciente, int dniPaciente, LocalDate fechaIngreso, Domicilio domicilioPaciente) {
+    public Paciente() {
     }
 
     public Paciente(String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {

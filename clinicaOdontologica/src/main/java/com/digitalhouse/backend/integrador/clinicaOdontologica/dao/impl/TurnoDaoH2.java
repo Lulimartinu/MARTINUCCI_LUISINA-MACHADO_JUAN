@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
 @Component
 public class TurnoDaoH2 implements IDao<Turno> {
     private final Logger LOGGER = LoggerFactory.getLogger(TurnoDaoH2.class);
@@ -82,3 +82,4 @@ public class TurnoDaoH2 implements IDao<Turno> {
         return turno;
     }
 }
+*/

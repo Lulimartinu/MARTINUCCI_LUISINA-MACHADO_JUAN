@@ -17,7 +17,7 @@ public class Odontologo {
     private String apellidoOdontologo;
 
 
-    public Odontologo(long aLong, String string, String rsString, String s) {
+    public Odontologo() {
     }
 
     public Odontologo(String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {

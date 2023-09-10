@@ -12,8 +12,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
 public class PacienteDaoH2 implements IDao<Paciente> {
-    private final Logger LOGGER = LoggerFactory.getLogger(PacienteDaoH2.class);
+   /* private final Logger LOGGER = LoggerFactory.getLogger(PacienteDaoH2.class);
     private final String CTE_ERROR = "Ha ocurrido un error al intentar cerrar la bdd. {}";
 
     @Override
@@ -220,4 +221,4 @@ public class PacienteDaoH2 implements IDao<Paciente> {
 
         return new Paciente(idPaciente, nombrePaciente, apellidoPaciente, dniPaciente,fechaIngreso, domicilioPaciente);}
 
-}
+ } */
