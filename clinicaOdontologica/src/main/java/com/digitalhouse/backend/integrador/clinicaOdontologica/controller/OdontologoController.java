@@ -9,6 +9,7 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.pacien
 import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IOdontologoService;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl.OdontologoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -26,10 +27,10 @@ import java.util.List;
 @RequestMapping("/odontologos")
 
 public class OdontologoController {
-    private final IOdontologoService odontologoService;
+    private final OdontologoService odontologoService;
 
     @Autowired
-    public OdontologoController(IOdontologoService odontologoService) {
+    public OdontologoController(OdontologoService odontologoService) {
         this.odontologoService = odontologoService;
     }
 

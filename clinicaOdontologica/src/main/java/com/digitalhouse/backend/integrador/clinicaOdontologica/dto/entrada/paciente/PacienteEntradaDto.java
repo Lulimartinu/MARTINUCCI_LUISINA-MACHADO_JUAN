@@ -4,25 +4,24 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Domicilio;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.validation.constraints.FutureOrPresent;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PacienteEntradaDto {
     @NotNull(message = "El nombre del paciente no puede ser nulo")
     @NotBlank(message = "Debe completar con un nombre")
+    @Size(min = 2, max = 50,message = "El nombre del Paciente debe tener un mini de 2 y max de 50 caracteres")
     private String nombrePaciente;
     @NotNull(message = "El apellido del paciente no puede ser nulo")
     @NotBlank(message = "Debe completar con un apellido")
     private String apellidoPaciente;
     @NotNull(message = "El dni del paciente no puede ser nulo")
+    @Digits(integer = 8,fraction = 0,message = "El dni debe tener como maximo 8 digitos")
     private int dni;
     @NotNull(message = "La fecha de ingreso no puede ser nula")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
-
     private LocalDate fechaIngreso;
     @NotNull(message = "El Domicilio  no puede ser nula")
     private Domicilio domicilio;

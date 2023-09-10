@@ -21,6 +21,17 @@ public class TurnoEntradaDto {
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
     private LocalDateTime fechaYHora;
 
+
+    public TurnoEntradaDto() {
+    }
+
+    public TurnoEntradaDto(Long odontologoId, Long pacienteId, LocalDateTime fechaYHora) {
+        this.odontologoId = odontologoId;
+        this.pacienteId = pacienteId;
+        this.fechaYHora = fechaYHora;
+    }
+
+
     public Long getOdontologoId() {
         return odontologoId;
     }

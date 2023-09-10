@@ -2,6 +2,7 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paci
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
