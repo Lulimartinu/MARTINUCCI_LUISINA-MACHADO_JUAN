@@ -16,9 +16,7 @@ public class Domicilio {
     private String localidad;
     @Column(length = 50)
     private String provincia;
-    public Long getId() {
-        return id;
-    }
+
     public Domicilio() {
     }
 
@@ -35,6 +33,9 @@ public class Domicilio {
         this.numero = numero;
         this.localidad = localidad;
         this.provincia = provincia;
+    }
+    public Long getId() {
+        return id;
     }
     public void setId(Long id) {
         this.id = id;
@@ -72,8 +73,4 @@ public class Domicilio {
         this.provincia = provincia;
     }
 
-    @Override
-    public String toString() {
-        return "Id: " + id + " - Calle: " + calle + " - Numero: " + numero + " - Localidad: " + localidad + " - Provincia: " + provincia;
-    }
 }

@@ -11,21 +11,14 @@ public class Turno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "odontologos_id")
+    @JoinColumn(name = "odontologo_id")
     private Odontologo odontologo;
     @ManyToOne
-    @JoinColumn(name ="pacientes_id")
+    @JoinColumn(name ="paciente_id")
     private Paciente paciente;
     private LocalDateTime fechaYHora;
 
     public Turno() {
-    }
-
-    public Turno(Long id, Odontologo odontologo, Paciente paciente, LocalDateTime fechaYHora) {
-        this.id = id;
-        this.odontologo = odontologo;
-        this.paciente = paciente;
-        this.fechaYHora = fechaYHora;
     }
 
     public Turno(Odontologo odontologo, Paciente paciente, LocalDateTime fechaYHora) {

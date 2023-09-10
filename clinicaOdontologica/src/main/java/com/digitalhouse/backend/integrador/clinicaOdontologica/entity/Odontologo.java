@@ -20,13 +20,6 @@ public class Odontologo {
     public Odontologo() {
     }
 
-    public Odontologo(Long id, String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
-        this.id = id;
-        this.numeroMatricula = numeroMatricula;
-        this.nombreOdontologo = nombreOdontologo;
-        this.apellidoOdontologo = apellidoOdontologo;
-    }
-
     public Odontologo(String numeroMatricula, String nombreOdontologo, String apellidoOdontologo) {
         this.numeroMatricula = numeroMatricula;
         this.nombreOdontologo = nombreOdontologo;
@@ -65,7 +58,4 @@ public class Odontologo {
         this.apellidoOdontologo = apellidoOdontologo;
     }
 
-    public String toString() {
-        return "\nID: " + this.id + "\nNumero Matricula: " + this.numeroMatricula + "\nNombre: " + this.nombreOdontologo + "\nApellido: " + this.apellidoOdontologo + "\n-----------------------";
-    }
 }

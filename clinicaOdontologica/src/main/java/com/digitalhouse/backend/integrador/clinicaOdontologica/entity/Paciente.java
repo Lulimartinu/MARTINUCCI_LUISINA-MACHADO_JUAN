@@ -28,15 +28,6 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(Long id, String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
-        this.id = id;
-        this.nombrePaciente = nombrePaciente;
-        this.apellidoPaciente = apellidoPaciente;
-        this.dni = dni;
-        this.fechaIngreso = fechaIngreso;
-        this.domicilio = domicilio;
-    }
-
     public Paciente(String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
         this.nombrePaciente = nombrePaciente;
         this.apellidoPaciente = apellidoPaciente;
@@ -92,15 +83,4 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
-    @Override
-    public String toString() {
-        return "Paciente{" +
-                "id=" + id +
-                ", nombrePaciente='" + nombrePaciente + '\'' +
-                ", apellidoPaciente='" + apellidoPaciente + '\'' +
-                ", dni=" + dni +
-                ", fechaIngreso=" + fechaIngreso +
-                ", domicilio=" + domicilio +
-                '}';
-    }
 }
