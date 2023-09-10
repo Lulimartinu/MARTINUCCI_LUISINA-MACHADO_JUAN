@@ -129,7 +129,6 @@
         <div class="container">
             <div class="section-title text-center">
                 <h3>PACIENTES</h3>
-                <p> ------------ </p>
             </div><!-- end title -->
 			
                 <div class="row">
@@ -139,54 +138,50 @@
 							<form id="contactForm" name="sentMessage" novalidate="novalidate">
 								<div class="row">
 									<div class="col-md-6">
+										<p> DATOS PACIENTE </p>
 										<div class="form-group">
-											<input class="form-control" id="name" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
+											<input class="form-control" id="nombrePaciente" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="apellido" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
+											<input class="form-control" id="apellidoPaciente" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="dni" type="number" placeholder="DNI" required="required" data-validation-required-message="INGRESE DNI">
+											<input class="form-control" id="dniPaciente" type="number" placeholder="DNI" required="required" data-validation-required-message="INGRESE DNI">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="fechaIngreso" type="date" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
+											<input class="form-control" id="fechaIngresoPaciente" type="date" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
 											<p class="help-block text-danger"></p>
 										</div>
 
 										<p> DOMICILIO PACIENTE </p>
 
 										<div class="form-group">
-											<input class="form-control" id="calle" type="text" placeholder="CALLE" required="required" data-validation-required-message="INGRESE CALLE">
+											<input class="form-control" id="callePaciente" type="text" placeholder="CALLE" required="required" data-validation-required-message="INGRESE CALLE">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="numeroCalle" type="number" placeholder="NUMERO" required="required" data-validation-required-message="INGRESE NUMERO">
+											<input class="form-control" id="numeroCallePaciente" type="number" placeholder="NUMERO" required="required" data-validation-required-message="INGRESE NUMERO">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="localidad" type="text" placeholder="LOCALIDAD" required="required" data-validation-required-message="INGRESE LOCALIDAD">
+											<input class="form-control" id="localidadPaciente" type="text" placeholder="LOCALIDAD" required="required" data-validation-required-message="INGRESE LOCALIDAD">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="provincia" type="text" placeholder="PROVINCIA" required="required" data-validation-required-message="INGRESE PROVINCIA">
+											<input class="form-control" id="provinciaPaciente" type="text" placeholder="PROVINCIA" required="required" data-validation-required-message="INGRESE PROVINCIA">
 											<p class="help-block text-danger"></p>
 										</div>
 							
 								
 									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<textarea class="form-control" id="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-											<p class="help-block text-danger"></p>
-										</div>
-									</div>
+									
 									<div class="clearfix"></div>
 									<div class="col-lg-12 text-center">
 										<div id="success"></div>
-										<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Send Message</button>
+										<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">CREAR PACIENTE</button>
 									</div>
 								</div>
 							</form>
@@ -586,12 +581,7 @@
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
+								
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
