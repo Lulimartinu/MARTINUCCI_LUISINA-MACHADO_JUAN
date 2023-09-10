@@ -3,6 +3,7 @@ package com.digitalhouse.backend.integrador.clinicaOdontologica.controller;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modificacion.PacienteModificacionEntrada;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,18 +31,18 @@ public class PacienteController {
     }
 
     @PutMapping("/actualizar")
-    public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@Valid @RequestBody PacienteModificacionEntrada paciente) {
+    public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@Valid @RequestBody PacienteModificacionEntrada paciente) throws ResourceNotFoundException {
         return new ResponseEntity<>(pacienteService.actualizarPaciente(paciente), HttpStatus.OK);
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public ResponseEntity<?> eliminarPaciente(@PathVariable Long id ) {
+    public ResponseEntity<?> eliminarPaciente(@PathVariable Long id ) throws ResourceNotFoundException {
         pacienteService.eliminarPacientePorId(id);
         return new ResponseEntity<>("Se ha eliminado el paciente con id : {}" + id, HttpStatus.OK);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<PacienteSalidaDto> buscarPacientePorId(@PathVariable Long id){
+    public ResponseEntity<PacienteSalidaDto> buscarPacientePorId(@PathVariable Long id) throws ResourceNotFoundException {
         return new ResponseEntity<>(pacienteService.buscarPacientePorId(id), HttpStatus.OK);
     }
 

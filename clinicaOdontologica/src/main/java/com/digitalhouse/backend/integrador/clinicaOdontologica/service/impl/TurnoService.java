@@ -12,6 +12,8 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.turno.
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Odontologo;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Paciente;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Turno;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.BadRequestException;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.TurnoRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.ITurnoService;
 import org.modelmapper.ModelMapper;
@@ -43,14 +45,14 @@ public class TurnoService implements ITurnoService {
 
 
     @Override
-    public List<TurnoSalidaDto> detallarTurnos() {
+    public List<TurnoSalidaDto> detallarTurnos() throws ResourceNotFoundException{
         List<TurnoSalidaDto> turnos = turnoRepository.findAll().stream().map(this::entidadADto).toList();
         LOGGER.info("lista de todos los turnos disponibles :{} ", turnos);
         return turnos;
     }
 
     @Override
-    public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) {
+    public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) throws BadRequestException, ResourceNotFoundException {
         TurnoSalidaDto turnoSalidaDto= null ;
 
       PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPacienteId());
@@ -59,13 +61,14 @@ public class TurnoService implements ITurnoService {
         if (paciente == null || odontologo == null) {
             if (paciente == null && odontologo == null) {
                 LOGGER.error("El Paciente y el Odontologo no se encuentran en nuestra BDD");
+                throw new BadRequestException("El Paciente y el Odontologo no se encuentran en nuestra BDD");
 
             } else if (paciente == null) {
                 LOGGER.error("No se encuentra el Paciente en nuestra BDD");
-
+                throw new BadRequestException("No se encuentra el Paciente en nuestra BDD");
             } else {
                 LOGGER.error("No se encuentra el Odontologo en nuestra BDD");
-
+                throw new BadRequestException("No se encuentra el Odontologo en nuestra BDD");
             }
         } else {
             Turno turnoCreado = turnoRepository.save(modelMapper.map(turno, Turno.class));
@@ -80,18 +83,19 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void eliminarTurnoPorId(Long id) {
+    public void eliminarTurnoPorId(Long id) throws ResourceNotFoundException{
         if (buscarTurnoPorId(id) != null) {
             turnoRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el turno con el id: {}", id);
         } else {
             LOGGER.error("No se ha encontrado un Turno en la BDD con ese id");
+            throw new ResourceNotFoundException("No se ha encontrado un Turno en la BDD con ese id");
         }
 
     }
 
     @Override
-    public TurnoSalidaDto buscarTurnoPorId(Long id) {
+    public TurnoSalidaDto buscarTurnoPorId(Long id) throws ResourceNotFoundException{
         Turno turnoBuscado = turnoRepository.findById(id).orElse(null);
         TurnoSalidaDto turnoSalidaDto = null;
 
@@ -99,12 +103,14 @@ public class TurnoService implements ITurnoService {
             turnoSalidaDto = entidadADto(turnoBuscado);
             LOGGER.info("Se ha encontrado el Turno: {}", turnoSalidaDto);
         } else
-            LOGGER.error("No se ha encontrado un Turno en la BDD con ese id");
+        {LOGGER.error("No se ha encontrado un Turno en la BDD con ese id " + id );
+        throw new ResourceNotFoundException("No se ha encontrado un Turno en la BDD con el id " +id);}
+
         return turnoSalidaDto;
     }
 
     @Override
-    public TurnoSalidaDto actualizarTurno(TurnoModificacionEntrada turnoModificacionEntrada) {
+    public TurnoSalidaDto actualizarTurno(TurnoModificacionEntrada turnoModificacionEntrada) throws ResourceNotFoundException {
         Turno turnoAActualizar= turnoRepository.findById(turnoModificacionEntrada.getId()).orElse(null);
         TurnoSalidaDto turnoSalidaDto = null;
         if(turnoAActualizar != null){
@@ -116,7 +122,10 @@ public class TurnoService implements ITurnoService {
             turnoSalidaDto = entidadADto(turnoAActualizar);
             LOGGER.warn("Se ha actualizado el turno: {}", turnoSalidaDto);
         }
-        else  LOGGER.error("No se ha podido actualizar el turno");
+        else {
+            LOGGER.error("No se ha podido actualizar el turno");
+            throw new ResourceNotFoundException("No se ha podido actualizar el turno");
+        }
 
         return turnoSalidaDto;
     }
@@ -134,7 +143,7 @@ public class TurnoService implements ITurnoService {
     }
 
 
-    private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id) {
+    private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id) throws ResourceNotFoundException {
         return modelMapper.map(pacienteService.buscarPacientePorId(id), PacienteTurnoSalidaDto.class);
     }
 
@@ -142,7 +151,7 @@ public class TurnoService implements ITurnoService {
         return modelMapper.map(odontologoService.buscarOdontologoPorId(id), OdontoTurnoSalidaDto.class);
     }
 
-    private TurnoSalidaDto entidadADto(Turno turno) {
+    private TurnoSalidaDto entidadADto(Turno turno) throws ResourceNotFoundException {
         TurnoSalidaDto turnoSalidaDto = modelMapper.map(turno, TurnoSalidaDto.class);
         turnoSalidaDto.setPacienteTurnoSalidaDto(pacSalDtoASalTurnoDto(turno.getPaciente().getId()));
         turnoSalidaDto.setOdontoTurnoSalidaDto(odontoSalDtoASalTurnoDto(turno.getOdontologo().getId()));

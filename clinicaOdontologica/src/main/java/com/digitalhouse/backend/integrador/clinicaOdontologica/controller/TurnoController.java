@@ -6,6 +6,8 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.pacie
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.turno.TurnoEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.turno.TurnoSalidaDto;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.BadRequestException;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,28 +30,28 @@ public class TurnoController {
     }
 
     @PostMapping("/crear")
-    public ResponseEntity<TurnoSalidaDto> crearTurno(@Valid @RequestBody TurnoEntradaDto turno) {
+    public ResponseEntity<TurnoSalidaDto> crearTurno(@Valid @RequestBody TurnoEntradaDto turno) throws BadRequestException, ResourceNotFoundException {
         return new ResponseEntity<>(turnoService.crearTurno(turno), HttpStatus.CREATED);
     }
 
     @PutMapping("/actualizar")
-    public ResponseEntity<TurnoSalidaDto> actualizarTurno(@Valid @RequestBody TurnoModificacionEntrada turno) {
+    public ResponseEntity<TurnoSalidaDto> actualizarTurno(@Valid @RequestBody TurnoModificacionEntrada turno) throws ResourceNotFoundException {
         return new ResponseEntity<>(turnoService.actualizarTurno(turno), HttpStatus.OK);
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public ResponseEntity<?> eliminarTurno(@PathVariable Long id ) {
+    public ResponseEntity<?> eliminarTurno(@PathVariable Long id ) throws ResourceNotFoundException {
         turnoService.eliminarTurnoPorId(id);
         return new ResponseEntity<>("Se ha eliminado el Turno con id : {}" + id, HttpStatus.OK);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<TurnoSalidaDto> buscarTurnoPorId(@PathVariable Long id){
+    public ResponseEntity<TurnoSalidaDto> buscarTurnoPorId(@PathVariable Long id) throws ResourceNotFoundException {
         return new ResponseEntity<>(turnoService.buscarTurnoPorId(id), HttpStatus.OK);
     }
 
     @GetMapping("/detallar")
-    public ResponseEntity<List<TurnoSalidaDto>> detallarTurnos(){
+    public ResponseEntity<List<TurnoSalidaDto>> detallarTurnos() throws ResourceNotFoundException {
         return new ResponseEntity<>(turnoService.detallarTurnos(),HttpStatus.OK);
     }
 

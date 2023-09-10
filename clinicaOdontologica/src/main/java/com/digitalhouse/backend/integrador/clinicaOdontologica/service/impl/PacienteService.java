@@ -4,6 +4,8 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.modif
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.entity.Paciente;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.BadRequestException;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.PacienteRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
 import org.modelmapper.ModelMapper;
@@ -44,18 +46,19 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public void eliminarPacientePorId(Long id) {
+        public void eliminarPacientePorId(Long id) throws ResourceNotFoundException {
             if (buscarPacientePorId(id) != null) {
                 pacienteRepository.deleteById(id);
                 LOGGER.warn("Se ha eliminado el Odontologo con el id: {}", id);
             } else {
                 LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
+                throw new ResourceNotFoundException("No se ha encontrado un Odontologo en la BDD con ese id");
             }
 
         }
 
         @Override
-        public PacienteSalidaDto buscarPacientePorId(Long id) {
+        public PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException{
             Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
             PacienteSalidaDto pacienteSalidaDto = null;
 
@@ -63,12 +66,14 @@ public class PacienteService  implements IPacienteService {
                 pacienteSalidaDto = entidadADtoSalida(pacienteBuscado);
                 LOGGER.info("Se ha encontrado el Paciente: {}", pacienteSalidaDto);
             } else
-                LOGGER.error("No se ha encontrado un Paciente en la BDD con ese id");
+            {LOGGER.error("No se ha encontrado un Paciente en la BDD con ese id");
+                throw new ResourceNotFoundException("No se ha encontrado un Paciente en la BDD con ese id");}
+
             return pacienteSalidaDto;
         }
 
         @Override
-        public PacienteSalidaDto actualizarPaciente(PacienteModificacionEntrada pacienteModificacionEntrada) {
+        public PacienteSalidaDto actualizarPaciente(PacienteModificacionEntrada pacienteModificacionEntrada) throws ResourceNotFoundException {
             Paciente pacienteAActualizar = dtoModificacionAEntidad(pacienteModificacionEntrada);
             Paciente pacienteActualizado = pacienteRepository.findById(pacienteAActualizar.getId()).orElse(null);
             PacienteSalidaDto pacienteSalidaDto = null;
@@ -79,7 +84,8 @@ public class PacienteService  implements IPacienteService {
                 pacienteActualizado = pacienteAActualizar;
                 pacienteSalidaDto = entidadADtoSalida(pacienteActualizado);
                 LOGGER.warn("Se ha actualizado el Paciente: {}", pacienteActualizado);
-            } else LOGGER.error("No se ha encontrado un Paciente en la BDD con ese id");
+            } else {LOGGER.error("No se ha encontrado un Paciente en la BDD con ese id");
+            throw new ResourceNotFoundException("No se ha encontrado un Paciente en la BDD con ese id");}
             return pacienteSalidaDto;
         }
 
