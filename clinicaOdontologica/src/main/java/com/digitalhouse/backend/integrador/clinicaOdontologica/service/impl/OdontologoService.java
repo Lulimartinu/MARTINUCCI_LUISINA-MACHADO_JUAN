@@ -65,8 +65,8 @@ public class OdontologoService implements IOdontologoService {
             LOGGER.warn("Se ha eliminado el Odontologo con el id: {}", id);
         }
         else {
-            LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
-            throw new ResourceNotFoundException("No se ha encontrado un Odontologo en la BDD con ese id");
+            LOGGER.error("No se ha encontrado un Odontologo en la BDD con el id: " + id);
+            throw new ResourceNotFoundException("No se ha encontrado un Odontologo en la BDD con el id: " + id);
         }
     }
 
