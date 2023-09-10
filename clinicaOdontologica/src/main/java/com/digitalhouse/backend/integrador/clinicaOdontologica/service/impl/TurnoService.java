@@ -52,11 +52,10 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) throws BadRequestException, ResourceNotFoundException {
-        TurnoSalidaDto turnoSalidaDto= null ;
-
-      PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPacienteId());
-      OdontologoSalidaDto odontologo = odontologoService.buscarOdontologoPorId(turno.getOdontologoId());
+    public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) throws BadRequestException {
+        TurnoSalidaDto turnoSalidaDto;
+        PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPacienteId());
+        OdontologoSalidaDto odontologo = odontologoService.buscarOdontologoPorId(turno.getOdontologoId());
 
         if (paciente == null || odontologo == null) {
             if (paciente == null && odontologo == null) {
@@ -73,7 +72,6 @@ public class TurnoService implements ITurnoService {
         } else {
             Turno turnoCreado = turnoRepository.save(modelMapper.map(turno, Turno.class));
             turnoSalidaDto = entidadADto(turnoCreado);
-
             LOGGER.info("Nuevo turno registrado con exito: {}", turnoSalidaDto);
         }
 
@@ -129,17 +127,17 @@ public class TurnoService implements ITurnoService {
         return turnoSalidaDto;
     }
 
+    /*
     private void configureMapping() {
-        // Mapeo de TurnoEntradaDto a Turno
+
         modelMapper.typeMap(TurnoEntradaDto.class, Turno.class)
                 .addMapping(TurnoEntradaDto::getPacienteId, Turno::setPaciente)
                 .addMapping(TurnoEntradaDto::getOdontologoId, Turno::setOdontologo);
 
-        // Mapeo de Turno a TurnoSalidaDto
         modelMapper.typeMap(Turno.class, TurnoSalidaDto.class)
                 .addMapping(Turno::getPaciente, TurnoSalidaDto::setPacienteTurnoSalidaDto)
                 .addMapping(Turno::getOdontologo, TurnoSalidaDto::setOdontoTurnoSalidaDto);
-    }
+    }*/
 
 
     private PacienteTurnoSalidaDto pacSalDtoASalTurnoDto(Long id)  {
