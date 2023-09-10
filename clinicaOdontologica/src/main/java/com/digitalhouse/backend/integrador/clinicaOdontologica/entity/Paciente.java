@@ -1,7 +1,5 @@
 package com.digitalhouse.backend.integrador.clinicaOdontologica.entity;
 
-import org.springframework.web.bind.annotation.GetMapping;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -25,7 +23,7 @@ public class Paciente {
     private Domicilio domicilio;
 
 
-    public Paciente() {
+    public Paciente(Long idPaciente, String nombrePaciente, String apellidoPaciente, int dniPaciente, LocalDate fechaIngreso, Domicilio domicilioPaciente) {
     }
 
     public Paciente(String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
