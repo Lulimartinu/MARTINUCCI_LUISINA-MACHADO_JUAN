@@ -49,10 +49,10 @@ public class PacienteService  implements IPacienteService {
         public void eliminarPacientePorId(Long id) throws ResourceNotFoundException {
             if (buscarPacientePorId(id) != null) {
                 pacienteRepository.deleteById(id);
-                LOGGER.warn("Se ha eliminado el Odontologo con el id: {}", id);
+                LOGGER.warn("Se ha eliminado el Paciente con el id: {}", id);
             } else {
-                LOGGER.error("No se ha encontrado un Odontologo en la BDD con ese id");
-                throw new ResourceNotFoundException("No se ha encontrado un Odontologo en la BDD con ese id");
+                LOGGER.error("No se ha encontrado un Paciente en la BDD con el id: " + id);
+                throw new ResourceNotFoundException("No se ha encontrado un Paciente en la BDD con el id: "  + id);
             }
 
         }
