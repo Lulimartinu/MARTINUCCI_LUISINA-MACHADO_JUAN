@@ -58,7 +58,7 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException{
+        public PacienteSalidaDto buscarPacientePorId(Long id) {
             Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
             PacienteSalidaDto pacienteSalidaDto = null;
 
@@ -67,7 +67,7 @@ public class PacienteService  implements IPacienteService {
                 LOGGER.info("Se ha encontrado el Paciente: {}", pacienteSalidaDto);
             } else
             {LOGGER.error("No se ha encontrado un Paciente en la BDD con el id" + id);
-            throw new ResourceNotFoundException("No se ha encontrado un Paciente en la BDD con el id: " + id);
+
             }
 
             return pacienteSalidaDto;

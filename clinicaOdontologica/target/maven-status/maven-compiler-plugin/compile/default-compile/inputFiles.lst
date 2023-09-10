@@ -7,6 +7,7 @@ C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clini
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\controller\TurnoController.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\paciente\DomicilioEntradaDto.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\paciente\PacienteEntradaDto.java
+C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\exception\ResourceNotFoundException.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\ClinicaOdontologicaApplication.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dao\H2Connection.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dao\impl\OdontologoDaoH2.java
@@ -21,8 +22,10 @@ C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clini
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\repository\PacienteRepository.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\entity\Paciente.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dao\IDao.java
+C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\exception\GlobalExceptionHandler.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\service\impl\OdontologoService.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\service\IPacienteService.java
+C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\exception\BadRequestException.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\odontologo\OdontologoEntradaDto.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\dto\entrada\modificacion\DomicilioModificacionEntrada.java
 C:\Users\Luli\OneDrive\Desktop\clinicaOdontologicaMM\clinicaOdontologicaMM\clinicaOdontologica\src\main\java\com\digitalhouse\backend\integrador\clinicaOdontologica\entity\Odontologo.java

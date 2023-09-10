@@ -95,7 +95,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto buscarTurnoPorId(Long id) throws ResourceNotFoundException{
+    public TurnoSalidaDto buscarTurnoPorId(Long id){
         Turno turnoBuscado = turnoRepository.findById(id).orElse(null);
         TurnoSalidaDto turnoSalidaDto = null;
 
@@ -103,8 +103,7 @@ public class TurnoService implements ITurnoService {
             turnoSalidaDto = entidadADto(turnoBuscado);
             LOGGER.info("Se ha encontrado el Turno: {}", turnoSalidaDto);
         } else
-        {LOGGER.error("No se ha encontrado un Turno en la BDD con ese id " + id );
-        throw new ResourceNotFoundException("No se ha encontrado un Turno en la BDD con el id " +id);}
+        LOGGER.error("No se ha encontrado un Turno en la BDD con ese id " + id );
 
         return turnoSalidaDto;
     }
