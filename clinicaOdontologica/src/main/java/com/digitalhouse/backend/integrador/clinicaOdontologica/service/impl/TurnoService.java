@@ -70,6 +70,7 @@ public class TurnoService implements ITurnoService {
                 throw new BadRequestException("No se encuentra el Odontologo en nuestra BDD");
             }
         } else {
+            modelMapper.getConfiguration().setAmbiguityIgnored(true);
             Turno turnoCreado = turnoRepository.save(modelMapper.map(turno, Turno.class));
             turnoSalidaDto = entidadADto(turnoCreado);
             LOGGER.info("Nuevo turno registrado con exito: {}", turnoSalidaDto);
