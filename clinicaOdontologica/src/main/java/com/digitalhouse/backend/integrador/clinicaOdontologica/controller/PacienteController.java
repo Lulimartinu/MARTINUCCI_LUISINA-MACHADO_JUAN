@@ -42,7 +42,7 @@ public class PacienteController {
                     content = @Content)
     })
     @PostMapping("/crear")
-    public ResponseEntity<PacienteSalidaDto> crearPaciente(@Valid @RequestBody PacienteEntradaDto paciente) throws BadRequestException {
+    public ResponseEntity<PacienteSalidaDto> crearPaciente(@RequestBody @Valid PacienteEntradaDto paciente) throws BadRequestException {
         return new ResponseEntity<>(pacienteService.crearPaciente(paciente), HttpStatus.CREATED);
     }
 
