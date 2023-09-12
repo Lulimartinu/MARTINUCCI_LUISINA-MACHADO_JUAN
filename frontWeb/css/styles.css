@@ -85,7 +85,7 @@ button:hover {
   width: 20%;
   margin: 1.5rem auto;
   padding: 1rem;
-  color: #C4E62C;
+  color: blueviolet;
   background-color: antiquewhite;
    font-size: 20px;
   
@@ -97,5 +97,12 @@ button:hover {
   border-color: wheat;
   padding: 10px;
   border-radius: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  
+}
+
+.formulario button{
+  width: 60%;
+  background-color: blueviolet;
 }

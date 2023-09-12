@@ -72,6 +72,7 @@
     <section class="formulario">
       <form id="form-paciente">
         <h2>PACIENTE</h2>
+        <hr>
         <p> DATOS PACIENTE </p>
         <div> 
           <input class="controls" id= "nombrePaciente" type="text" placeholder="NOMBRE" required="required"
@@ -110,7 +111,7 @@
             data-validation-required-message="INGRESE PROVINCIA">
         </div>
 
-        <button type="submit">CREAR PACIENTE</button>
+        <button class="submit" type="submit">CREAR PACIENTE</button>
   </div>
   </form>
 
@@ -119,18 +120,19 @@
   <section class="formulario">
     <form id="form-odontologo">
       <h2>ODONTOLOGO</h2>
+      <hr>
       <p> DATOS ODONTOLOGO </p>
 
       <div>
-        <input id="nombreOdontologo" type="text" placeholder="NOMBRE" required="required"
+        <input class="controls" id="nombreOdontologo" type="text" placeholder="NOMBRE" required="required"
           data-validation-required-message="INGRESE NOMBRE">
       </div>
       <div>
-        <input id="apellidoOdontologo" type="text" placeholder="APELLIDO" required="required"
+        <input class="controls" id="apellidoOdontologo" type="text" placeholder="APELLIDO" required="required"
           data-validation-required-message="INGRESE APELLIDO">
       </div>
       <div>
-        <input id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required"
+        <input class="controls" id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required"
           data-validation-required-message="INGRESE MATRICULA">
       </div>
       <button type="submit">CREAR ODONTOLOGO</button>
@@ -142,21 +144,22 @@
 
     <form id="form-turno">
       <h2>TURNO</h2>
+      <hr>
       <p> DATOS TURNO </p>
 
       <div>
         <p>Paciente</p>
-        <input id="idPaciente" type="numer" placeholder="ID PACIENTE" required="required"
+        <input class="controls" id="idPaciente" type="numer" placeholder="ID PACIENTE" required="required"
           data-validation-required-message="INGRESE ID">
       </div>
       <div>
         <p>Odontologo</p>
-        <input id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
+        <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
           data-validation-required-message="INGRESE APELLIDO">
       </div>
       <div>
         <p>Fecha y Hora</p>
-        <input id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO" required="required"
+        <input class="controls" id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO" required="required"
           data-validation-required-message="INGRESE FECHA INGRESO">
       </div>
       <button type="submit">CREAR TURNO</button>
