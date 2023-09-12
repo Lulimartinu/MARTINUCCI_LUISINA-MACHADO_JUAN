@@ -8,6 +8,7 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.BadRequ
 import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.repository.PacienteRepository;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.IPacienteService;
+import net.bytebuddy.implementation.bytecode.Throw;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,7 +59,7 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public PacienteSalidaDto buscarPacientePorId(Long id) {
+        public PacienteSalidaDto buscarPacientePorId(Long id){
             Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
             PacienteSalidaDto pacienteSalidaDto = null;
 
@@ -67,7 +68,6 @@ public class PacienteService  implements IPacienteService {
                 LOGGER.info("Se ha encontrado el Paciente: {}", pacienteSalidaDto);
             } else
             {LOGGER.error("No se ha encontrado un Paciente en la BDD con el id" + id);
-
             }
 
             return pacienteSalidaDto;

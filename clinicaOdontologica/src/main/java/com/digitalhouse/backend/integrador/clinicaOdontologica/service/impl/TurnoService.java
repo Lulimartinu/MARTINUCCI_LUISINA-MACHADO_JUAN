@@ -52,7 +52,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) throws BadRequestException {
+    public TurnoSalidaDto crearTurno(TurnoEntradaDto turno) throws BadRequestException, ResourceNotFoundException {
         TurnoSalidaDto turnoSalidaDto;
         PacienteSalidaDto paciente = pacienteService.buscarPacientePorId(turno.getPacienteId());
         OdontologoSalidaDto odontologo = odontologoService.buscarOdontologoPorId(turno.getOdontologoId());
@@ -94,7 +94,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto buscarTurnoPorId(Long id){
+    public TurnoSalidaDto buscarTurnoPorId(Long id) throws ResourceNotFoundException {
         Turno turnoBuscado = turnoRepository.findById(id).orElse(null);
         TurnoSalidaDto turnoSalidaDto = null;
 
@@ -129,7 +129,7 @@ public class TurnoService implements ITurnoService {
     }
 
 
-    private PacienteTurnoSalidaDto pacienteSalidaDtoASalidaTurnoDto(Long id) {
+    private PacienteTurnoSalidaDto pacienteSalidaDtoASalidaTurnoDto(Long id){
         return modelMapper.map(pacienteService.buscarPacientePorId(id), PacienteTurnoSalidaDto.class);
     }
 
@@ -137,7 +137,7 @@ public class TurnoService implements ITurnoService {
         return modelMapper.map(odontologoService.buscarOdontologoPorId(id), OdontoTurnoSalidaDto.class);
     }
 
-    private TurnoSalidaDto entidadADto(Turno turno) {
+    private TurnoSalidaDto entidadADto(Turno turno){
         TurnoSalidaDto turnoSalidaDto = modelMapper.map(turno, TurnoSalidaDto.class);
         turnoSalidaDto.setPacienteTurnoSalidaDto(pacienteSalidaDtoASalidaTurnoDto(turno.getPaciente().getId()));
         turnoSalidaDto.setOdontoTurnoSalidaDto(odontologoSalidaDtoASalidaTurnoDto(turno.getOdontologo().getId()));

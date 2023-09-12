@@ -13,7 +13,7 @@ public interface IPacienteService {
 
     PacienteSalidaDto crearPaciente(PacienteEntradaDto paciente) throws BadRequestException;
     void eliminarPacientePorId(Long id) throws ResourceNotFoundException;
-    PacienteSalidaDto buscarPacientePorId(Long id);
+    PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException;
     PacienteSalidaDto actualizarPaciente(PacienteModificacionEntrada pacienteModificacionEntrada) throws ResourceNotFoundException;
 
 }

@@ -23,7 +23,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/pacientes")
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin
 public class PacienteController {
     private final IPacienteService pacienteService;
 
