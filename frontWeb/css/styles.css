@@ -77,7 +77,14 @@ button:hover {
   background-color: antiquewhite
 }
 
-form{
-  float: left;
-  
+
+
+.formulario  {
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  width: 40%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--card-bg);
 }
