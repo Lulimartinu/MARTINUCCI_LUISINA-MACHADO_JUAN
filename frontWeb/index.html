@@ -1,196 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <body>
+    <div id="bienvenida">
+      <header>
+        <picture>
+          <img class="logo" src="/uploads/fotoLogo.png" alt="LOGO" />
+        </picture>
 
-<body>
-  <div id="bienvenida">
-    <header>
-      <picture>
-        <img class="logo" src="/uploads/fotoLogo.png" alt="LOGO" />
-      </picture>
+        <nav class="barranav nav-font">
+          <ul>
+            <li>
+              <a href="https://github.com/Lulimartinu/clinicaOdontologicaMM"
+                >REPOSITORIO.GIT</a
+              >
+            </li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#sobre-nosotros">ABOUT US</a></li>
+            <li><a href="#form-paciente">PACIENTES</a></li>
+            <li><a href="#form-odontologo">ODONTOLOGOS</a></li>
+            <li><a href="#form-turno">TURNOS</a></li>
+          </ul>
+        </nav>
+      </header>
 
+      <section class="home">
+        <h1 class="title">CLÍNICA ODONTOLÓGICA</h1>
+        <h2 class="mm">MACHADO & MARTINUCCI</h2>
+      </section>
+    </div>
 
-      <nav class="barranav nav-font">
-        <ul>
-          <li><a href="https://github.com/Lulimartinu/clinicaOdontologicaMM">REPOSITORIO.GIT</a></li>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#sobre-nosotros">ABOUT US</a></li>
-          <li><a href="#form-paciente">PACIENTES</a></li>
-          <li><a href="#form-odontologo">ODONTOLOGOS</a></li>
-          <li><a href="#form-turno">TURNOS</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="sitio">
+      <section class="sobre-nosotros" id="sobre-nosotros">
+        <h2>Sobre nosotros</h2>
+        <p>
+          Hola! Somos Juan y Luisina, estamos emocionados de presentar nuestro
+          proyecto, que representa un hito significativo en nuestro viaje
+          académico y profesional, ya que nos ha brindado la oportunidad de
+          aplicar habilidades que hemos adquirido en nuestras materias de
+          frontend y backend.
+        </p>
+        <br />
+        <p>
+          Decidimos embarcarnos en la aventura de crear nuestro proyecto desde
+          cero, sin depender de plantillas preexistentes. Esta decisión fue
+          impulsada por nuestro deseo de experimentar y ganar experiencia en la
+          creación de un proyecto desde cero, trabajando juntos como equipo. A
+          pesar de los desafíos y las dificultades que encontramos en el camino,
+          siempre mantuvimos una actitud positiva y una fuerte dedicación.
+        </p>
+        <br />
+        <p>
+          Estamos encantados de haber desarrollado una API y un front-end para
+          consumirla, y estamos orgullosos de lo que hemos logrado. Este
+          proyecto no solo representa nuestro compromiso con la excelencia en el
+          campo del desarrollo web, sino también la buena relación y la
+          armoniosa colaboración que hemos cultivado a lo largo de este proceso.
+        </p>
+        <br />
+        <p>
+          Gracias por visitar nuestro sitio web y ser parte de nuestro viaje.<br />
+          Esperamos que disfrutes de nuestro proyecto tanto como nosotros
+          disfrutamos creándolo.
+        </p>
+        <br />
+        <p>¡Gracias por tu apoyo!</p>
+        <br />
+        <p>Juan Machado y Luisina Martinucci</p>
+      </section>
 
-    <section class="home">
-      <h1 class="title">CLÍNICA ODONTOLÓGICA</h1>
-      <h2 class="mm"> MACHADO & MARTINUCCI </h2>
+      <div class="formularios">
+        <section class="formulario">
+          <form id="form-paciente">
+            <h2>PACIENTE</h2>
+            <hr />
+            <p>DATOS PACIENTE</p>
+            <div>
+              <input
+                class="controls"
+                id="nombrePaciente"
+                type="text"
+                placeholder="NOMBRE"
+                required="required"
+                data-validation-required-message="INGRESE NOMBRE"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="apellidoPaciente"
+                type="text"
+                placeholder="APELLIDO"
+                required="required"
+                data-validation-required-message="INGRESE APELLIDO"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="dniPaciente"
+                type="number"
+                placeholder="DNI"
+                required="required"
+                data-validation-required-message="INGRESE DNI"
+              />
+            </div>
 
-    </section>
+            <div>
+              <input
+                class="controls"
+                id="fechaIngresoPaciente"
+                type="date"
+                placeholder="FECHA INGRESO"
+                required="required"
+                data-validation-required-message="INGRESE FECHA INGRESO"
+              />
+            </div>
 
-  </div>
+            <p>Domicilio</p>
 
-  <div class="sitio">
-    <div class="aboutUs">
-    <section class="sobre-nosotros" id="sobre-nosotros">
-      <h2 class="about-us"> Sobre nosotros</h2>
-      <p>
-        Hola! Somos Juan y Luisina, estamos emocionados de presentar nuestro proyecto, que representa un hito
-        significativo en nuestro viaje académico y profesional, ya que nos ha brindado la oportunidad de aplicar
-        habilidades que hemos adquirido en nuestras materias de frontend y backend.
-      </p>
-      <br>
-      <p>
-        Decidimos embarcarnos en la aventura de crear nuestro proyecto desde cero, sin depender de plantillas
-        preexistentes. Esta decisión fue impulsada por nuestro deseo de experimentar y ganar experiencia en la creación
-        de un proyecto desde cero, trabajando juntos como equipo. A pesar de los desafíos y las dificultades que
-        encontramos en el camino, siempre mantuvimos una actitud positiva y una fuerte dedicación.
-      </p>
-      <br>
-      <p>
-        Estamos encantados de haber desarrollado una API y un front-end para consumirla, y estamos orgullosos de lo que
-        hemos logrado. Este proyecto no solo representa nuestro compromiso con la excelencia en el campo del desarrollo
-        web, sino también la buena relación y la armoniosa colaboración que hemos cultivado a lo largo de este proceso.
-      </p>
-      <br>
-      <p>
-        Gracias por visitar nuestro sitio web y ser parte de nuestro viaje.<br> Esperamos que disfrutes de nuestro
-        proyecto tanto como nosotros disfrutamos creándolo.
-      </p>
-      <br>
-      <p>
-        ¡Gracias por tu apoyo!
-      </p>
-      <br>
-      <p>
-        Juan Machado y Luisina Martinucci
-      </p>
-    </section>
-  </div>
+            <div>
+              <input
+                class="controls"
+                id="callePaciente"
+                type="text"
+                placeholder="CALLE"
+                required="required"
+                data-validation-required-message="INGRESE CALLE"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="numeroCallePaciente"
+                type="number"
+                placeholder="NUMERO"
+                required="required"
+                data-validation-required-message="INGRESE NUMERO"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="localidadPaciente"
+                type="text"
+                placeholder="LOCALIDAD"
+                required="required"
+                data-validation-required-message="INGRESE LOCALIDAD"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="provinciaPaciente"
+                type="text"
+                placeholder="PROVINCIA"
+                required="required"
+                data-validation-required-message="INGRESE PROVINCIA"
+              />
+            </div>
 
-  
-    <section class="formulario">
-      <form id="form-paciente">
-        <h2>PACIENTE</h2>
-        <hr>
-        <p> DATOS PACIENTE </p>
-        <div>
-          <input class="controls" id="nombrePaciente" type="text" placeholder="NOMBRE" required="required"
-            data-validation-required-message="INGRESE NOMBRE">
-        </div>
-        <div>
-          <input class="controls" id="apellidoPaciente" type="text" placeholder="APELLIDO" required="required"
-            data-validation-required-message="INGRESE APELLIDO">
-        </div>
-        <div>
-          <input class="controls" id="dniPaciente" type="number" placeholder="DNI" required="required"
-            data-validation-required-message="INGRESE DNI">
-        </div>
+            <button class="submit" type="submit">CREAR PACIENTE</button>
+          </form>
+        </section>
 
-        <div>
-          <input class="controls" id="fechaIngresoPaciente" type="date" placeholder="FECHA INGRESO" required="required"
-            data-validation-required-message="INGRESE FECHA INGRESO">
-        </div>
+        <section class="formulario">
+          <form id="form-odontologo">
+            <h2>ODONTOLOGO</h2>
+            <hr />
+            <p>DATOS ODONTOLOGO</p>
 
-        <p> Domicilio </p>
+            <div>
+              <input
+                class="controls"
+                id="nombreOdontologo"
+                type="text"
+                placeholder="NOMBRE"
+                required="required"
+                data-validation-required-message="INGRESE NOMBRE"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="apellidoOdontologo"
+                type="text"
+                placeholder="APELLIDO"
+                required="required"
+                data-validation-required-message="INGRESE APELLIDO"
+              />
+            </div>
+            <div>
+              <input
+                class="controls"
+                id="matriculaOdontologo"
+                type="test"
+                placeholder="XX-00000000"
+                required="required"
+                data-validation-required-message="INGRESE MATRICULA"
+              />
+            </div>
+            <button type="submit">CREAR ODONTOLOGO</button>
+          </form>
+        </section>
 
-        <div>
-          <input class="controls" id="callePaciente" type="text" placeholder="CALLE" required="required"
-            data-validation-required-message="INGRESE CALLE">
-        </div>
-        <div>
-          <input class="controls" id="numeroCallePaciente" type="number" placeholder="NUMERO" required="required"
-            data-validation-required-message="INGRESE NUMERO">
-        </div>
-        <div>
-          <input class="controls" id="localidadPaciente" type="text" placeholder="LOCALIDAD" required="required"
-            data-validation-required-message="INGRESE LOCALIDAD">
-        </div>
-        <div>
-          <input class="controls" id="provinciaPaciente" type="text" placeholder="PROVINCIA" required="required"
-            data-validation-required-message="INGRESE PROVINCIA">
-        </div>
+        <section class="formulario">
+          <form id="form-turno">
+            <h2>TURNO</h2>
+            <hr />
+            <p>DATOS TURNO</p>
 
-        <button class="submit" type="submit">CREAR PACIENTE</button>
+            <div>
+              <p>Paciente</p>
+              <input
+                class="controls"
+                id="idPaciente"
+                type="numer"
+                placeholder="ID PACIENTE"
+                required="required"
+                data-validation-required-message="INGRESE ID"
+              />
+            </div>
+            <div>
+              <p>Odontologo</p>
+              <input
+                class="controls"
+                id="idOdontologo"
+                type="number"
+                placeholder="ID ODONTOLOGO"
+                required="required"
+                data-validation-required-message="INGRESE APELLIDO"
+              />
+            </div>
+            <div>
+              <p>Fecha y Hora</p>
+              <input
+                class="controls"
+                id="fechaTurno"
+                type="datetime-local"
+                placeholder="FECHA INGRESO"
+                required="required"
+                data-validation-required-message="INGRESE FECHA INGRESO"
+              />
+            </div>
+            <button type="submit">CREAR TURNO</button>
+          </form>
+        </section>
+      </div>
+    </div>
 
-      </form>
+    <!-- PACIENTES JavaScript -->
+    <script src="js/pacientes.js"></script>
+    <!--ODONTOLOGOS JavaScript-->
+    <script src="js/odontologos.js"></script>
+    <!--TURNOS JavaScript-->
+    <script src="js/turnos.js"></script>
 
-    </section>
-
-    <section class="formulario">
-      <form id="form-odontologo">
-        <h2>ODONTOLOGO</h2>
-        <hr>
-        <p> DATOS ODONTOLOGO </p>
-
-        <div>
-          <input class="controls" id="nombreOdontologo" type="text" placeholder="NOMBRE" required="required"
-            data-validation-required-message="INGRESE NOMBRE">
-        </div>
-        <div>
-          <input class="controls" id="apellidoOdontologo" type="text" placeholder="APELLIDO" required="required"
-            data-validation-required-message="INGRESE APELLIDO">
-        </div>
-        <div>
-          <input class="controls" id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required"
-            data-validation-required-message="INGRESE MATRICULA">
-        </div>
-        <button type="submit">CREAR ODONTOLOGO</button>
-      </form>
-
-    </section>
-
-    <section class="formulario">
-
-      <form id="form-turno">
-        <h2>TURNO</h2>
-        <hr>
-        <p> DATOS TURNO </p>
-
-        <div>
-          <p>Paciente</p>
-          <input class="controls" id="idPaciente" type="numer" placeholder="ID PACIENTE" required="required"
-            data-validation-required-message="INGRESE ID">
-        </div>
-        <div>
-          <p>Odontologo</p>
-          <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
-            data-validation-required-message="INGRESE APELLIDO">
-        </div>
-        <div>
-          <p>Fecha y Hora</p>
-          <input class="controls" id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO" required="required"
-            data-validation-required-message="INGRESE FECHA INGRESO">
-        </div>
-        <button type="submit">CREAR TURNO</button>
-      </form>
-
-    </section>
-  </div>
-
-  <!-- PACIENTES JavaScript -->
-  <script src="js/pacientes.js"></script>
-  <!--ODONTOLOGOS JavaScript-->
-  <script src="js/odontologos.js"></script>
-  <!--TURNOS JavaScript-->
-  <script src="js/turnos.js"></script>
-
-
-
-  <!-- ALL JS FILES -->
-  <script src="js/all.js"></script>
-  <script src="js/headline.js"></script>
-
-</body>
-
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/headline.js"></script>
+  </body>
 </html>

@@ -90,6 +90,8 @@ header ul a {
 }
 
 .sitio {
+  background-image: url(../uploads/fondo2.jpg);
+  background-size:cover;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -97,41 +99,31 @@ header ul a {
 
 }
 
-.aboutUs{
-  background-image: url(../uploads/fondo2.jpg);
-  background-size: cover;
-  position:absolute;
- 
- 
-}
-
 .sobre-nosotros {
   margin:100px;
-  color: black;
   font-weight: bold;
   text-align: center;
 }
 
-.about-us{
+
+.sobre-nosotros h2 {
+  color:  #ffffff;
+  font-size: 10rem;
   margin-top: 160px;
 }
 
-.sobre-nosotros h2 {
-  font-size: 30px;
-}
-
 .sobre-nosotros p {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 
-h1.title {
+.title {
   font-size: 5rem;
   color: #ffffff;
   text-decoration: none;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-h2.mm{
+.mm{
   font-size: 3rem;
   color: #000000;
   text-decoration: none;
@@ -163,18 +155,23 @@ h2.mm{
 }
 
 
+.formularios{
+  display:flex;
+  flex-direction: column;
+ align-items: center;
+}
 
-.formulario {
-  
+.formulario {  
   border-radius: 10px;
   width: 50%;
-  margin: 5rem auto;
+  margin-top: 5rem;
   padding: 1rem;
   color: blueviolet;
   background-color: antiquewhite;
   font-size: 20px;
 
 }
+
 
 .controls {
   width: 60%;
@@ -192,3 +189,4 @@ h2.mm{
   background-color: blueviolet;
   color: wheat;
 }
+
