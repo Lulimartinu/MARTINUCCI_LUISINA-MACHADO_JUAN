@@ -4,6 +4,7 @@
   box-sizing: border-box;
   text-align: center;
   font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
 }
 
 body{
@@ -80,11 +81,21 @@ button:hover {
 
 
 .formulario  {
-  box-shadow: var(--shadow);
   border-radius: 10px;
-  width: 40%;
+  width: 20%;
   margin: 1.5rem auto;
   padding: 1rem;
-  color: var(--white);
-  background-color: var(--card-bg);
+  color: #C4E62C;
+  background-color: antiquewhite;
+   font-size: 20px;
+  
+}
+
+.controls{
+  width: 60%;
+  background-color: white;
+  border-color: wheat;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
 }
