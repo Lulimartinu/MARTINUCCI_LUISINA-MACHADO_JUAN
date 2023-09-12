@@ -105,4 +105,5 @@ button:hover {
 .formulario button{
   width: 60%;
   background-color: blueviolet;
+  color: wheat;
 }
