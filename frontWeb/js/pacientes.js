@@ -1,16 +1,16 @@
 
 window.addEventListener('load',function(){
-    let formulario = document.forms[0];
+    let formulario = document.querySelector('#form-paciente');
     let nombrePaciente = document.querySelector("#nombrePaciente");
     let apellidoPaciente = document.querySelector("#apellidoPaciente");
     let dni = document.querySelector("#dniPaciente");
     let fechaIngreso = document.querySelector("#fechaIngresoPaciente");
     let calle = document.querySelector("#callePaciente");
-    let numero = document.querySelector("#numeroPaciente");
+    let numeroCalle = document.querySelector("#numeroPaciente");
     let localidad = document.querySelector("#localidadPaciente");
     let provincia = document.querySelector("#provinciaPaciente");
     
-    let url = "http://localhost:8080/swagger-ui/index.html";
+    let url = "http://localhost:8080";
 
     formulario.addEventListener('submit',function(event){
         event.preventDefault();
@@ -21,7 +21,7 @@ window.addEventListener('load',function(){
             fechaIngreso : fechaIngreso.value,
             domicilio : {
                 calle : calle.value,
-                numero : numero.value,
+                //numero : numeroCalle.value,
                 localidad : localidad.value,
                 provincia : provincia.value,
             }
@@ -31,11 +31,13 @@ window.addEventListener('load',function(){
 
         let settings = {
             method : "POST",
-            body : JSON.stringify(payload)
+            body : JSON.stringify(payload),
+            headers: {
+                "Content-Type" : "application/json"
+            }
         }
         
         crearPaciente(settings)
-
     })
 
     function crearPaciente (settings){

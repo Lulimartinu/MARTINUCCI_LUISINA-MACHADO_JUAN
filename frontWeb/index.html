@@ -13,16 +13,20 @@
 </head>
 
 <body>
-   <!-- LOADER -->
-   <div id="preloader">
-    <div id="main-ld">
-  <div id="loader"></div>  
-</div>
-</div><!-- end loader -->
-<!-- END LOADER -->
+
   <div id="sitio">
     
-    <h1>CLÍNICA ODONTOLÓGICA MACHADO&MARTINUCCI</h1>
+    <h1>CLÍNICA ODONTOLÓGICA</h1>
+    <h3 class="cd-headline clip is-full-width">
+      <span>MACHADO & MARTINUCCI</span>
+      <span class="cd-words-wrapper">
+        <b class="is-visible">Web Developer</b>
+        <b>Web Design</b>
+        <b>Creative Design</b>
+        <b>Graphic Design</b>
+      </span>
+    </h3>
+
     <button id="completar-paciente">Paciente</button>
     <button id="completar-odontologo">Odontólogo</button>
     <button id="sacar-turno">Turno</button>
@@ -32,31 +36,126 @@
 
   <section class="sobre-nosotros">
     <h2> Sobre nosotros</h2>
-    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem perspiciatis, minima maxime est aspernatur nulla ipsam repudiandae quia suscipit iusto? Hic rem, omnis sit ut eveniet dicta nisi animi doloribus?
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, corporis quos. Neque rerum optio, quis explicabo earum, dolorum sunt atque aspernatur laboriosam voluptates officia cumque dicta magni, aliquam voluptatum possimus.
+    <p> 
+      Hola! Somos Juan y Luisina, estamos emocionados de presentar nuestro proyecto, que representa un hito significativo en nuestro viaje académico y profesional, ya que nos ha brindado la oportunidad de aplicar habilidades que hemos adquirido en nuestras materias de frontend y backend.
+    </p>
+      <br>
+<p>
+Decidimos embarcarnos en la aventura de crear nuestro proyecto desde cero, sin depender de plantillas preexistentes. Esta decisión fue impulsada por nuestro deseo de experimentar y ganar experiencia en la creación de un proyecto desde cero, trabajando juntos como equipo. A pesar de los desafíos y las dificultades que encontramos en el camino, siempre mantuvimos una actitud positiva y una fuerte dedicación.
+</p>
+<br>
+<p>
+Estamos encantados de haber desarrollado una API y un front-end para consumirla, y estamos orgullosos de lo que hemos logrado. Este proyecto no solo representa nuestro compromiso con la excelencia en el campo del desarrollo web, sino también la buena relación y la armoniosa colaboración que hemos cultivado a lo largo de este proceso.
+</p>
+<br>
+<p>
+Gracias por visitar nuestro sitio web y ser parte de nuestro viaje.<br> Esperamos que disfrutes de nuestro proyecto tanto como nosotros disfrutamos creándolo.
+</p>
+<br>
+<p>
+¡Gracias por tu apoyo!
+</p>
+<br>
+<p>
+Juan Machado y Luisina Martinucci
     </p>
   </section>
 
-  <section> 
-        <form> 
-          
-            <input class="form-control" id="nombrePaciente" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
-            <p class="help-block text-danger"></p>
-         
-          
-            <input class="form-control" id="apellidoPaciente" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
-            <p class="help-block text-danger"></p>
-        
-            <input class="form-control" id="dniPaciente" type="number" placeholder="DNI" required="required" data-validation-required-message="INGRESE DNI">
-            <p class="help-block text-danger"></p>
-        
-            <input class="form-control" id="fechaIngresoPaciente" type="date" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
-            <p class="help-block text-danger"></p>
-         
-        </form>
-      
+  <section class="PACIENTE"> 
+          <div class="formularioPaciente">
+            <form id="form-paciente">		
+              <h2>PACIENTE</h2>					
+                  <p> DATOS PACIENTE </p>
+                  <div class="form-group">
+                    <input  id="nombrePaciente" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
+                  </div>
+                  <div class="form-group">
+                    <input  id="apellidoPaciente" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
+                  </div>
+                  <div class="form-group">
+                    <input  id="dniPaciente" type="number" placeholder="DNI" required="required" data-validation-required-message="INGRESE DNI">
+                  </div>
+                  <div class="form-group">
+                    <input  id="fechaIngresoPaciente" type="date" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
+                  </div>
+
+                  <p> Domicilio </p>
+
+                  <div class="form-group">
+                    <input  id="callePaciente" type="text" placeholder="CALLE" required="required" data-validation-required-message="INGRESE CALLE">
+                  </div>
+                  <div class="form-group">
+                    <input  id="numeroCallePaciente" type="number" placeholder="NUMERO" required="required" data-validation-required-message="INGRESE NUMERO">
+                  </div>
+                  <div class="form-group">
+                    <input  id="localidadPaciente" type="text" placeholder="LOCALIDAD" required="required" data-validation-required-message="INGRESE LOCALIDAD">                   
+                  </div>
+                  <div class="form-group">
+                    <input  id="provinciaPaciente" type="text" placeholder="PROVINCIA" required="required" data-validation-required-message="INGRESE PROVINCIA">                 
+                  </div>
+            
+                  <button type="submit">CREAR PACIENTE</button>
+                </div>                             
+        </form>    
       </div>
   </section>
+
+  <section class="ODONTOLOGO"> 
+    <div class="formularioOdontologo">
+      <form id="form-odontologo">
+        <h2>ODONTOLOGO</h2>						
+            <p> DATOS ODONTOLOGO </p>
+
+            <div class="form-group">
+              <input  id="nombreOdontologo" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
+            </div>
+            <div class="form-group">
+              <input  id="apellidoOdontologo" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
+            </div>
+            <div class="form-group">
+              <input  id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required" data-validation-required-message="INGRESE MATRICULA">
+          </div>       
+            <button type="submit">CREAR ODONTOLOGO</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="TURNO"> 
+    <div class="formularioTurno">
+      <form id="form-turno">
+        <h2>TURNO</h2>						
+            <p> DATOS TURNO </p>
+
+            <div class="form-group">
+              <p>Paciente</p>
+              <input  id="idPaciente" type="numer" placeholder="ID PACIENTE" required="required" data-validation-required-message="INGRESE ID">
+            </div>
+            <div class="form-group">
+              <p>Odontologo</p>
+              <input  id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required" data-validation-required-message="INGRESE APELLIDO">
+            </div>
+            <div class="form-group">
+              <p>Fecha y Hora</p>
+                <input  id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
+            </div>       
+            <button type="submit">CREAR TURNO</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- PACIENTES JavaScript -->
+  <script src="js/pacientes.js"></script>
+  	<!--ODONTOLOGOS JavaScript-->
+	<script src="js/odontologos.js"></script>
+    	<!--TURNOS JavaScript-->
+	<script src="js/turnos.js"></script>
+
+
+  
+      <!-- ALL JS FILES -->
+     <script src="js/all.js"></script>
+     <script src="js/headline.js"></script>
+
 </body>
 
 </html>

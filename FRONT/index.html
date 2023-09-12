@@ -135,55 +135,49 @@
 					<div class="col-md-12">
 						<div class="formularioPaciente">
 							<div id="message"></div>
-							<form id="form" name="sentMessage" novalidate="novalidate">
-								<div class="row">
-									<div class="col-md-6">
+							<form id="form" name="sentMessage">						
 										<p> DATOS PACIENTE </p>
 										<div class="form-group">
-											<input class="form-control" id="nombrePaciente" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
+											<input  id="nombrePaciente" type="text" placeholder="NOMBRE" required="required" data-validation-required-message="INGRESE NOMBRE">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="apellidoPaciente" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
+											<input  id="apellidoPaciente" type="text" placeholder="APELLIDO" required="required" data-validation-required-message="INGRESE APELLIDO">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="dniPaciente" type="number" placeholder="DNI" required="required" data-validation-required-message="INGRESE DNI">
+											<input  id="dniPaciente" type="number" placeholder="DNI" required="required" data-validation-required-message="INGRESE DNI">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="fechaIngresoPaciente" type="date" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
+											<input  id="fechaIngresoPaciente" type="date" placeholder="FECHA INGRESO" required="required" data-validation-required-message="INGRESE FECHA INGRESO">
 											<p class="help-block text-danger"></p>
 										</div>
 
 										<p> DOMICILIO PACIENTE </p>
 
 										<div class="form-group">
-											<input class="form-control" id="callePaciente" type="text" placeholder="CALLE" required="required" data-validation-required-message="INGRESE CALLE">
+											<input  id="callePaciente" type="text" placeholder="CALLE" required="required" data-validation-required-message="INGRESE CALLE">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="numeroCallePaciente" type="number" placeholder="NUMERO" required="required" data-validation-required-message="INGRESE NUMERO">
+											<input  id="numeroCallePaciente" type="number" placeholder="NUMERO" required="required" data-validation-required-message="INGRESE NUMERO">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="localidadPaciente" type="text" placeholder="LOCALIDAD" required="required" data-validation-required-message="INGRESE LOCALIDAD">
+											<input  id="localidadPaciente" type="text" placeholder="LOCALIDAD" required="required" data-validation-required-message="INGRESE LOCALIDAD">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input class="form-control" id="provinciaPaciente" type="text" placeholder="PROVINCIA" required="required" data-validation-required-message="INGRESE PROVINCIA">
+											<input  id="provinciaPaciente" type="text" placeholder="PROVINCIA" required="required" data-validation-required-message="INGRESE PROVINCIA">
 											<p class="help-block text-danger"></p>
 										</div>
 							
 								
 									</div>
+																	
+										<button type="submit">CREAR PACIENTE</button>
 									
-									<div class="clearfix"></div>
-									<div class="col-lg-12 text-center">
-										<div id="success"></div>
-										<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">CREAR PACIENTE</button>
-									</div>
-								</div>
 							</form>
 						</div>
                 </div><!-- end col -->
@@ -461,139 +455,9 @@
 		</div>
 	</div>
 	
-	<div id="pricing" class="section lb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Pricing</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-			
-			<div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$10</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Standard</h3>
-                            <ul class="pricing-content">
-                                <li><b>50GB</b> Disk Space</li>
-                                <li><b>50</b> Email Accounts</li>
-                                <li><b>50GB</b> Bandwidth</li>
-                                <li><b>10</b> Subdomains</li>
-                                <li><b>15</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable blue">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$20</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Business</h3>
-                            <ul class="pricing-content">
-                                <li><b>60GB</b> Disk Space</li>
-                                <li><b>60</b> Email Accounts</li>
-                                <li><b>60GB</b> Bandwidth</li>
-                                <li><b>15</b> Subdomains</li>
-                                <li><b>20</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable red">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$30</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Premium</h3>
-                            <ul class="pricing-content">
-                                <li><b>70GB</b> Disk Space</li>
-                                <li><b>70</b> Email Accounts</li>
-                                <li><b>70GB</b> Bandwidth</li>
-                                <li><b>20</b> Subdomains</li>
-                                <li><b>25</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			
-		</div>
-	</div>
-
-    <div id="contact" class="section db">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Contact</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="contact_form">
-                        <div id="message"></div>
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" id="name" type="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name.">
-										<p class="help-block text-danger"></p>
-									</div>
-									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email address.">
-										<p class="help-block text-danger"></p>
-									</div>
-									<div class="form-group">
-										<input class="form-control" id="phone" type="tel" placeholder="Your Phone" required="required" data-validation-required-message="Please enter your phone number.">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								
-								<div class="clearfix"></div>
-								<div class="col-lg-12 text-center">
-									<div id="success"></div>
-									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Send Message</button>
-								</div>
-							</div>
-						</form>
-                    </div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+    
 
     <div class="copyrights">
         <div class="container">
@@ -624,10 +488,11 @@
 	<script src="js/jquery.easing.1.3.js"></script> 
 	<script src="js/parallaxie.js"></script>
 	<script src="js/headline.js"></script>
-	<!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
+	
+	<!-- PACIENTES JavaScript -->
     <script src="js/pacientes.js"></script>
-    <!-- ALL PLUGINS -->
+   
+	<!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/jquery.vide.js"></script>
 
