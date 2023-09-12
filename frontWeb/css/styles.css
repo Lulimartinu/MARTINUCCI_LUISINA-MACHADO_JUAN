@@ -7,25 +7,102 @@
   box-sizing: border-box;
 }
 
-#bienvenida{
-  background-image: url("../uploads/Fondo.jpg");
-  background-size: cover;
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.sitio{
+a:hover {
+  opacity: 60%;
+}
+
+/*ESTILOS DEL HEADER*/
+
+header {
+  width: 80%;
+  height: 100px;
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  width: 70%;
+}
+
+.nav-font {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+header ul a {
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+
+#bienvenida {
+  position: relative;
+}
+
+#bienvenida::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#bienvenida::after {
+  content: "";
+  background-image: url("../uploads/Fondo.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+
+.sitio {
   background-image: url(../uploads/fondo2.jpg);
   background-size: cover;
-  
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
-.sobre-nosotros{
- margin-top: 100px;
+
+.sobre-nosotros {
+  margin: 100px 100px 10px;
   color: black;
   font-weight: bold;
   text-align: center;
+
 }
-.sobre-nosotros h2{
+
+.sobre-nosotros h2 {
   font-size: 30px;
 }
+
 .sobre-nosotros p {
   font-size: 20px;
 }
@@ -36,8 +113,8 @@ h1 {
   font-size: 70px;
   border-radius: 50px;
   color: #C4E62C;
- 
-  
+
+
 }
 
 button {
@@ -58,24 +135,25 @@ button:hover {
   transition: box-shadow 0.5s;
 }
 
-#completar-paciente{
+#completar-paciente {
   font-size: 30px;
   color: #C4E62C;
   background-color: antiquewhite
 }
 
-#completar-odontologo{
-  font-size: 30px;
-  color: #C4E62C;
-  background-color: antiquewhite
-}
-#sacar-turno{
+#completar-odontologo {
   font-size: 30px;
   color: #C4E62C;
   background-color: antiquewhite
 }
 
-#contact{
+#sacar-turno {
+  font-size: 30px;
+  color: #C4E62C;
+  background-color: antiquewhite
+}
+
+#contact {
   font-size: 30px;
   color: #C4E62C;
   background-color: antiquewhite
@@ -83,18 +161,19 @@ button:hover {
 
 
 
-.formulario  {
+.formulario {
+  
   border-radius: 10px;
-  width: 20%;
-  margin: 1.5rem auto;
+  width: 50%;
+  margin: 5rem auto;
   padding: 1rem;
   color: blueviolet;
   background-color: antiquewhite;
-   font-size: 20px;
-  
+  font-size: 20px;
+
 }
 
-.controls{
+.controls {
   width: 60%;
   background-color: white;
   border-color: wheat;
@@ -102,10 +181,10 @@ button:hover {
   border-radius: 4px;
   margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
-  
+
 }
 
-.formulario button{
+.formulario button {
   width: 60%;
   background-color: blueviolet;
   color: wheat;

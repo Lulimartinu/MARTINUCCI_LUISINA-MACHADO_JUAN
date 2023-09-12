@@ -13,19 +13,36 @@
 </head>
 
 <body>
-
   <div id="bienvenida">
+    <header>
+      <picture>
+        <img src="" alt="LOGO" />
+      </picture>
 
-    <h1>CLÍNICA ODONTOLÓGICA</h1>
-    <h3> MACHADO & MARTINUCCI </h3>
-    <br>
 
-    <button id="completar-paciente">Paciente</button>
-    <button id="completar-odontologo">Odontólogo</button>
-    <button id="sacar-turno">Turno</button>
-    <button id="contact">Contacto</button>
+      <nav class="barranav nav-font">
+        <ul>
+          <li><a href="https://github.com/Lulimartinu/clinicaOdontologicaMM">REPOSITORIO.GIT</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#sobre-nosotros">ABOUT US</a></li>
+          <li><a href="#form-paciente">PACIENTES</a></li>
+          <li><a href="#form-odontologo">ODONTOLOGOS</a></li>
+          <li><a href="#form-turno">TURNOS</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <script src="./js/code.js"></script>
+    <section class="home">
+      <h1>CLÍNICA ODONTOLÓGICA</h1>
+      <h3> MACHADO & MARTINUCCI </h3>
+      <br>
+
+      <button id="completar-paciente">Paciente</button>
+      <button id="completar-odontologo">Odontólogo</button>
+      <button id="sacar-turno">Turno</button>
+      <button id="contact">Contacto</button>
+
+    </section>
 
     <section class="sobre-nosotros">
       <h2> Sobre nosotros</h2>
@@ -69,8 +86,8 @@
         <h2>PACIENTE</h2>
         <hr>
         <p> DATOS PACIENTE </p>
-        <div> 
-          <input class="controls" id= "nombrePaciente" type="text" placeholder="NOMBRE" required="required"
+        <div>
+          <input class="controls" id="nombrePaciente" type="text" placeholder="NOMBRE" required="required"
             data-validation-required-message="INGRESE NOMBRE">
         </div>
         <div>
@@ -107,61 +124,61 @@
         </div>
 
         <button class="submit" type="submit">CREAR PACIENTE</button>
-  
-  </form>
 
-  </section>
+      </form>
 
-  <section class="formulario">
-    <form id="form-odontologo">
-      <h2>ODONTOLOGO</h2>
-      <hr>
-      <p> DATOS ODONTOLOGO </p>
+    </section>
 
-      <div>
-        <input class="controls" id="nombreOdontologo" type="text" placeholder="NOMBRE" required="required"
-          data-validation-required-message="INGRESE NOMBRE">
-      </div>
-      <div>
-        <input class="controls" id="apellidoOdontologo" type="text" placeholder="APELLIDO" required="required"
-          data-validation-required-message="INGRESE APELLIDO">
-      </div>
-      <div>
-        <input class="controls" id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required"
-          data-validation-required-message="INGRESE MATRICULA">
-      </div>
-      <button type="submit">CREAR ODONTOLOGO</button>
-    </form>
+    <section class="formulario">
+      <form id="form-odontologo">
+        <h2>ODONTOLOGO</h2>
+        <hr>
+        <p> DATOS ODONTOLOGO </p>
 
-  </section>
+        <div>
+          <input class="controls" id="nombreOdontologo" type="text" placeholder="NOMBRE" required="required"
+            data-validation-required-message="INGRESE NOMBRE">
+        </div>
+        <div>
+          <input class="controls" id="apellidoOdontologo" type="text" placeholder="APELLIDO" required="required"
+            data-validation-required-message="INGRESE APELLIDO">
+        </div>
+        <div>
+          <input class="controls" id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required"
+            data-validation-required-message="INGRESE MATRICULA">
+        </div>
+        <button type="submit">CREAR ODONTOLOGO</button>
+      </form>
 
-  <section class="formulario">
+    </section>
 
-    <form id="form-turno">
-      <h2>TURNO</h2>
-      <hr>
-      <p> DATOS TURNO </p>
+    <section class="formulario">
 
-      <div>
-        <p>Paciente</p>
-        <input class="controls" id="idPaciente" type="numer" placeholder="ID PACIENTE" required="required"
-          data-validation-required-message="INGRESE ID">
-      </div>
-      <div>
-        <p>Odontologo</p>
-        <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
-          data-validation-required-message="INGRESE APELLIDO">
-      </div>
-      <div>
-        <p>Fecha y Hora</p>
-        <input class="controls" id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO" required="required"
-          data-validation-required-message="INGRESE FECHA INGRESO">
-      </div>
-      <button type="submit">CREAR TURNO</button>
-    </form>
+      <form id="form-turno">
+        <h2>TURNO</h2>
+        <hr>
+        <p> DATOS TURNO </p>
 
-  </section>
-</div>
+        <div>
+          <p>Paciente</p>
+          <input class="controls" id="idPaciente" type="numer" placeholder="ID PACIENTE" required="required"
+            data-validation-required-message="INGRESE ID">
+        </div>
+        <div>
+          <p>Odontologo</p>
+          <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
+            data-validation-required-message="INGRESE APELLIDO">
+        </div>
+        <div>
+          <p>Fecha y Hora</p>
+          <input class="controls" id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO" required="required"
+            data-validation-required-message="INGRESE FECHA INGRESO">
+        </div>
+        <button type="submit">CREAR TURNO</button>
+      </form>
+
+    </section>
+  </div>
 
   <!-- PACIENTES JavaScript -->
   <script src="js/pacientes.js"></script>
