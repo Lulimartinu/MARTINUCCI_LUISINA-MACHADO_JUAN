@@ -20,17 +20,20 @@ a:hover {
 
 /*ESTILOS DEL HEADER*/
 
+.logo{
+  position:relative;
+  width: 40%;
+}
+
 header {
-  width: 80%;
+  width: 100%;
   height: 100px;
-  margin: 0 10%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items:center;
 }
 
 header nav {
-  width: 70%;
+  width: 90%;
 }
 
 .nav-font {
@@ -54,16 +57,22 @@ header ul a {
 
 
 #bienvenida {
-  position: relative;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.home{
+  margin: 15rem;
 }
 
 #bienvenida::before {
   content: "";
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: -1;
 }
@@ -75,11 +84,10 @@ header ul a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: -2;
 }
-
 
 .sitio {
   background-image: url(../uploads/fondo2.jpg);
@@ -108,31 +116,17 @@ header ul a {
 }
 
 
-h1 {
-  margin-bottom: 0.5rem;
-  font-size: 70px;
-  border-radius: 50px;
-  color: #C4E62C;
-
-
+h1.title {
+  font-size: 5rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-
-button {
-  padding-top: 50px;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  color: var(--white);
-  font-weight: bold;
-  box-shadow: var(--shadow);
-  transition: box-shadow 0.5s;
-}
-
-
-button:hover {
-  cursor: pointer;
-  box-shadow: none;
-  transition: box-shadow 0.5s;
+h2.mm{
+  font-size: 3rem;
+  color: #000000;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 #completar-paciente {
