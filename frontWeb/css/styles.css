@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+body{
+  padding:100px;
+  background-image: url("../uploads/Fondo.jpg");
+  background-size: cover;
+}
+
+
+.sobre-nosotros{
+ margin-top: 100px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.sobre-nosotros h2{
+  font-size: 30px;
+}
+.sobre-nosotros p {
+  font-size: 20px;
+}
+
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 70px;
+  border-radius: 50px;
+  color: #C4E62C;
+ 
+  
+}
+
+button {
+  padding-top: 50px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.5s;
+}
+
+
+button:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+}
+
+#completar-paciente{
+  font-size: 30px;
+  color: #C4E62C;
+  background-color: antiquewhite
+}
+
+#completar-odontologo{
+  font-size: 30px;
+  color: #C4E62C;
+  background-color: antiquewhite
+}
+#sacar-turno{
+  font-size: 30px;
+  color: #C4E62C;
+  background-color: antiquewhite
+}
+
+#contact{
+  font-size: 30px;
+  color: #C4E62C;
+  background-color: antiquewhite
+}
+
+form{
+  float: left;
+  font-size: 20px;
+}
