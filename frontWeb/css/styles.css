@@ -7,12 +7,11 @@
   box-sizing: border-box;
 }
 
-body{
-  padding:100px;
+#sitio{
   background-image: url("../uploads/Fondo.jpg");
   background-size: cover;
+  padding: 70px;
 }
-
 
 .sobre-nosotros{
  margin-top: 100px;
