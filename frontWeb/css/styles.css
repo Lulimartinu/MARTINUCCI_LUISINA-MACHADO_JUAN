@@ -90,8 +90,6 @@ header ul a {
 }
 
 .sitio {
-  background-image: url(../uploads/fondo2.jpg);
-  background-size: cover;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -99,12 +97,23 @@ header ul a {
 
 }
 
+.aboutUs{
+  background-image: url(../uploads/fondo2.jpg);
+  background-size: cover;
+  position:absolute;
+ 
+ 
+}
+
 .sobre-nosotros {
-  margin: 100px 100px 10px;
+  margin:100px;
   color: black;
   font-weight: bold;
   text-align: center;
+}
 
+.about-us{
+  margin-top: 160px;
 }
 
 .sobre-nosotros h2 {
