@@ -7,12 +7,16 @@
   box-sizing: border-box;
 }
 
-#sitio{
+#bienvenida{
   background-image: url("../uploads/Fondo.jpg");
   background-size: cover;
-  padding: 70px;
 }
 
+.sitio{
+  background-image: url(../uploads/fondo2.jpg);
+  background-size: cover;
+  
+}
 .sobre-nosotros{
  margin-top: 100px;
   color: black;
