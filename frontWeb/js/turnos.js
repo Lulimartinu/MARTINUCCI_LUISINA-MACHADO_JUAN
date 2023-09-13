@@ -52,7 +52,6 @@ window.addEventListener('load',function(){
 
             console.log("algunos de los datos es incorrecto");
             return Promise.reject(response)
-        })
-        
+        })   
     }
 })

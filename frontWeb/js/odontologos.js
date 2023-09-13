@@ -4,6 +4,7 @@ window.addEventListener('load',function(){
     let formularioEliminar = document.querySelector('#odontologo-eliminar')
 
     let idOdontologo = document.querySelector('#idOdontologo')
+    let id_Odontologo_delete = document.querySelector('#idOdontologo-delete')
 
     let nombreOdontologo = document.querySelector("#nombreOdontologo");
     let apellidoOdontologo = document.querySelector("#apellidoOdontologo");
@@ -76,7 +77,7 @@ formularioEliminar.addEventListener('submit', function (event) {
     event.preventDefault();
     
     //ID del odonto
-    let idOdonto = idOdontologo.value;
+    let idOdonto = id_Odontologo_delete.value;
     // url
     let apiUrl = 'http://localhost:8080/odontologos/eliminar/' + idOdonto;
     console.log(apiUrl)
