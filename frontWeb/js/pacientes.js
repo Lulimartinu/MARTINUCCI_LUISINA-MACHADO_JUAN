@@ -9,6 +9,7 @@ window.addEventListener('load',function(){
     let numeroCalle = document.querySelector("#numeroPaciente");
     let localidad = document.querySelector("#localidadPaciente");
     let provincia = document.querySelector("#provinciaPaciente");
+    let idPaciente = document.querySelector("#idPaciente");
     
     let url = "http://localhost:8080";
 
@@ -42,6 +43,27 @@ window.addEventListener('load',function(){
 
     function crearPaciente (settings){
         fetch(`${url}/pacientes/crear`, settings)
+        .then(response => {
+            console.log(response);
+            if (response.ok) return response.json()
+
+            console.log("algunos de los datos es incorrecto");
+            return Promise.reject(response)
+        })
+        
+    }
+
+
+
+//BUSCAR PACIENTE X ID
+    formulario.addEventListener('submit',function(event){
+        event.preventDefault();
+   
+       buscarPaciente()
+    })
+
+    function buscarPaciente(){
+        fetch(`${url}/pacientes/${idPaciente.value}`)
         .then(response => {
             console.log(response);
             if (response.ok) return response.json()
