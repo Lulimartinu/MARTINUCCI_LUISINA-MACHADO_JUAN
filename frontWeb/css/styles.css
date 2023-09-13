@@ -146,8 +146,8 @@ header ul a {
   width: 80%;
   margin: 8rem;
   padding: 1rem;
-  color: blueviolet;
-  background-color: antiquewhite;
+  color:#AA6C39;
+  background-color:#92C7C7;
   font-size: 1rem;
 }
 
@@ -169,7 +169,7 @@ header ul a {
 .formulario button {
   width: 40%;
   border-radius: 20px;
-  background-color: #8A2BE2; 
+  background-color: #C79191; 
   color: #FFF;
   font-size: 16px; 
   padding: 10px 20px; 
@@ -181,6 +181,10 @@ header ul a {
   background-color: #32248c;
 }
 
+.formulario p{
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .metodos{
   width: 60%;
