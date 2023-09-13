@@ -26,7 +26,7 @@
       <nav class="barranav nav-font">
         <ul>
           <li>
-            <a href="https://github.com/Lulimartinu/clinicaOdontologicaMM">REPOSITORIO.GIT</a>
+            <a href="https://github.com/Lulimartinu/clinicaOdontologicaMM">GIT</a>
           </li>
           <li><a href="#home"><span class="material-symbols-outlined">
                 home
@@ -157,7 +157,7 @@
           <div class="eliminarPaciente">
             <p>ELIMINAR PACIENTE POR ID</p>
             <form id="paciente-eliminar">
-              <input class="controls" id="idPaciente" type="number" placeholder="ID PACIENTE" required="required"
+              <input class="controls" id="idPacienteEliminar" type="number" placeholder="ID PACIENTE" required="required"
                 data-validation-required-message="ID PACIENTE" />
               <button class="submit" type="submit"><span class="material-symbols-outlined"> delete
 
@@ -224,12 +224,12 @@
           <p>DATOS TURNO</p>
           <div>
             <p>PACIENTE</p>
-            <input class="controls" id="idPaciente" type="number" placeholder="ID PACIENTE" required="required"
+            <input class="controls" id="idPacienteTurno" type="number" placeholder="ID PACIENTE" required="required"
               data-validation-required-message="INGRESE ID" />
           </div>
           <div>
             <p>ODONTÓLOGO</p>
-            <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
+            <input class="controls" id="idOdontologoTurno" type="number" placeholder="ID ODONTOLOGO" required="required"
               data-validation-required-message="INGRESE ID" />
           </div>
           <div>
@@ -245,7 +245,7 @@
         <div class="metodos">
           <div class="buscarTurno">
             <p>Buscar Turno Por ID</p>
-            <form>
+            <form id="buscar-Turno">
               <input class="controls" id="idTurno" type="number" placeholder="ID TURNO" required="required"
                 data-validation-required-message="ID TURNO" />
               <button class="submit" type="submit"><span class="material-symbols-outlined">
@@ -256,8 +256,8 @@
 
           <div class="eliminarTurno">
             <p>Eliminar Turno Por ID</p>
-            <form>
-              <input class="controls" id="idTurno" type="number" placeholder="ID TURNO" required="required"
+            <form id="eliminar-Turno">
+              <input class="controls" id="idTurnoEliminar" type="number" placeholder="ID TURNO" required="required"
                 data-validation-required-message="ID TURNO" />
               <button class="submit" type="submit"><span class="material-symbols-outlined"> delete
 

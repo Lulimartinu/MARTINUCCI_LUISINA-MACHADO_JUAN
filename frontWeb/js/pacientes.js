@@ -13,6 +13,7 @@ window.addEventListener('load', function () {
     let localidad = document.querySelector("#localidadPaciente");
     let provincia = document.querySelector("#provinciaPaciente");
     let idPaciente = document.querySelector("#id-Paciente");
+    let idPacienteEliminar = document.querySelector("#idPacienteEliminar");
  
 
     let url = "http://localhost:8080";
@@ -87,7 +88,7 @@ formularioEliminar.addEventListener('submit', function (event) {
     event.preventDefault();
     
     //ID del paciente
-    let idPac = idPaciente.value;
+    let idPac = idPacienteEliminar.value;
     // url
     let apiUrl = 'http://localhost:8080/pacientes/eliminar/' + idPac;
     

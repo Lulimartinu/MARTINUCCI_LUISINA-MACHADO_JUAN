@@ -69,7 +69,7 @@ window.addEventListener('load',function(){
             console.error('Ocurrió un error:', error);
         });
 
-
+})
 
 
  //ELIMINAR ODONTOLOGO X ID
@@ -103,9 +103,9 @@ formularioEliminar.addEventListener('submit', function (event) {
         .catch(error => {
             console.error('Ocurrió un error:', error);
         });
-});       
-})
+     
+});
 
+});
 
-})
 
