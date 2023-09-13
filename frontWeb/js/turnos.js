@@ -11,6 +11,41 @@ window.addEventListener('load',function(){
     let idTurnoEliminar = document.querySelector("#idTurnoEliminar")
     let url = "http://localhost:8080";
 
+    //detallarTurnos
+    function detallarTurnos() {
+        const apiUrl = 'http://localhost:8080/turnos/detallar';
+
+        // solicitud GET detallar
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('La solicitud no se completó con éxito');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (!data || !Array.isArray(data)) {
+                    // Verificar si `data` es undefined o no es un arreglo
+                    throw new Error('Los datos no están en el formato esperado');
+                }
+
+                //Formatear datos
+                let formateoDatos = data.map(turnos => `<li>${turnos.id + " " + turnos.apellidoOdontologo + " " + turnos.pacienteId}</li>`);
+
+                //elemento donde mostrar los datos
+                let listaTurnos = document.getElementById('detallarTurnos');
+
+                // Agregar el contenido HTML
+                listaTurnos.innerHTML = `<ul>${formateoDatos.join('')}</ul>`;
+            })
+            .catch(error => {
+                console.error('Ocurrió un error:', error);
+            });
+    }
+
+
+
+
     function padZero(value) {
         return value < 10 ? `0${value}` : `${value}`;
     }
@@ -58,6 +93,7 @@ window.addEventListener('load',function(){
             console.log("algunos de los datos es incorrecto");
             return Promise.reject(response)
         })   
+        detallarTurnos();
     }
 
 
