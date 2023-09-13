@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
     let formularioCrear = document.querySelector('#form-paciente');
     let formularioBuscar = document.querySelector('#paciente-buscar')
-    let formularioEliminar = this.document.querySelector('#paciente-eliminar')
+    let formularioEliminar = document.querySelector('#paciente-eliminar')
 
     let nombrePaciente = document.querySelector("#nombrePaciente");
     let apellidoPaciente = document.querySelector("#apellidoPaciente");
@@ -81,4 +81,46 @@ window.addEventListener('load', function () {
             });
     })
 
-})
+
+    /*
+    formularioEliminar.addEventListener('submit',function(event){
+        event.preventDefault();
+        let idPac = idPaciente.value;
+        const apiUrl = 'http://localhost:8080/pacientes/eliminar/';
+        // Realizar la solicitud GET
+       let Payload ={
+        idPaciente : idPaciente.value
+       }
+
+       console.log(Payload)
+
+            let Settings = {
+                method: "DELETE",
+                body: JSON.stringify(Payload),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        
+            eliminarPaciente(Settings)
+        })
+ 
+    })
+   
+
+function eliminarPaciente(Settings) {
+    fetch(`${url}/pacientes/eliminar`, Settings)
+        .then(response => {
+            console.log(response);
+            if (response.ok) return response.json()
+
+            console.log("algunos de los datos es incorrecto");
+            return Promise.reject(response)
+        })
+
+} 
+  
+*/
+
+});
+  

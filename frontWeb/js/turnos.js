@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-    let formulario = document.querySelector('#form-turno');
+    let formularioCrear = document.querySelector('#form-turno');
     let id_Paciente = document.querySelector("#idPaciente");
     let id_Odontologo = document.querySelector("#idOdontologo");
     let fechaTurno = document.querySelector("#fechaTurno");
@@ -10,7 +10,7 @@ window.addEventListener('load',function(){
         return value < 10 ? `0${value}` : `${value}`;
     }
 
-    formulario.addEventListener('submit',function(event){
+    formularioCrear.addEventListener('submit',function(event){
         event.preventDefault();
 
         // Obtén la fecha en formato de cadena
@@ -25,8 +25,6 @@ window.addEventListener('load',function(){
         )}-${padZero(fechaYHoraDate.getDate())} ${padZero(
             fechaYHoraDate.getHours()
         )}:${padZero(fechaYHoraDate.getMinutes())}`;
-
-
 
         let payload = {
             odontologoId : id_Odontologo.value,

@@ -1,12 +1,16 @@
 window.addEventListener('load',function(){
-    let formulario = document.querySelector('#form-odontologo');
+    let formularioCrear = document.querySelector('#form-odontologo');
+    let formularioBuscar = document.querySelector('#odontologo-buscar')
+    let idOdontologo = document.querySelector('#idOdontologo')
+
+
     let nombreOdontologo = document.querySelector("#nombreOdontologo");
     let apellidoOdontologo = document.querySelector("#apellidoOdontologo");
     let matriculaOdontologo = document.querySelector("#matriculaOdontologo");
 
     let url = "http://localhost:8080";
 
-    formulario.addEventListener('submit',function(event){
+    formularioCrear.addEventListener('submit',function(event){
         event.preventDefault();
         let payload = {
             numeroMatricula : matriculaOdontologo.value,
@@ -37,4 +41,33 @@ window.addEventListener('load',function(){
         })
         
     }
+
+
+
+//BUSCAR ODONTOLOGO PX ID 
+
+ formularioBuscar.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Definir la URL de la API
+    let idOdonto = idOdontologo.value;
+    const apiUrl = 'http://localhost:8080/odontologos/';
+    // Realizar la solicitud GET
+    fetch(apiUrl + idOdonto)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('La solicitud no se completó con éxito');
+            }
+            return response.json(); 
+        })
+        .then(data => {
+            
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Ocurrió un error:', error);
+        });
 })
+
+
+})
+
