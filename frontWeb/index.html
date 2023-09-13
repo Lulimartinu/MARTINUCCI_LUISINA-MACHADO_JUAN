@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -123,16 +124,20 @@
               data-validation-required-message="INGRESE PROVINCIA" />
           </div>
 
-          <button class="submit" type="submit">CREAR PACIENTE</button>
+          <button class="submit" type="submit"><span class="material-symbols-outlined">
+            add_circle
+            </span>CREAR PACIENTE</button>
         </form>
 
         <div class="metodos">
           <div class="buscarPaciente">
-            <p>BUSCAR PACIENTE POR ID</p>
+            <p> BUSCAR PACIENTE POR ID</p>
             <form id="paciente-buscar">
               <input class="controls" id="id-Paciente" type="number" placeholder="ID PACIENTE" required="required"
                 data-validation-required-message="ID PACIENTE" />
-              <button class="submit" type="submit">BUSCAR</button>
+              <button class="submit" type="submit"> <span class="material-symbols-outlined">
+                search
+                </span> BUSCAR</button>
             </form>
           </div>
 
@@ -141,7 +146,9 @@
             <form id="paciente-eliminar">
               <input class="controls" id="idPaciente" type="number" placeholder="ID PACIENTE" required="required"
                 data-validation-required-message="ID PACIENTE" />
-              <button class="submit" type="submit">ELIMINAR</button>
+              <button class="submit" type="submit"><span class="material-symbols-outlined"> delete
+          
+                </span>ELIMINAR</button>
             </form>
           </div>
         </div>
@@ -165,7 +172,9 @@
             <input class="controls" id="matriculaOdontologo" type="test" placeholder="XX-00000000" required="required"
               data-validation-required-message="INGRESE MATRICULA" />
           </div>
-          <button type="submit">CREAR ODONTOLOGO</button>
+          <button type="submit"><span class="material-symbols-outlined">
+            add_circle
+            </span>CREAR ODONTOLOGO</button>
         </form>
         <div class="metodos">
           <div class="buscarOdontologo">
@@ -173,7 +182,9 @@
             <form id="odontologo-buscar">
               <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
                 data-validation-required-message="ID ODONTOLOGO" />
-              <button class="submit" type="submit">BUSCAR</button>
+              <button class="submit" type="submit"><span class="material-symbols-outlined">
+                search
+                </span> BUSCAR</button>
             </form>
           </div>
 
@@ -182,7 +193,9 @@
             <form>
               <input class="controls" id="idOdontologo" type="number" placeholder="ID ODONTOLOGO" required="required"
                 data-validation-required-message="ID ODONTOLOGO" />
-              <button class="submit" type="submit">ELIMINAR</button>
+              <button class="submit" type="submit"><span class="material-symbols-outlined"> delete
+          
+              </span>ELIMINAR</button>
             </form>
           </div>
         </div>
@@ -211,7 +224,9 @@
             <input class="controls" id="fechaTurno" type="datetime-local" placeholder="FECHA INGRESO"
               required="required" data-validation-required-message="INGRESE FECHA INGRESO" />
           </div>
-          <button type="submit">CREAR TURNO</button>
+          <button type="submit"><span class="material-symbols-outlined">
+            add_circle
+            </span>CREAR TURNO</button>
         </form>
 
         <div class="metodos">
@@ -220,7 +235,9 @@
             <form>
               <input class="controls" id="idTurno" type="number" placeholder="ID TURNO" required="required"
                 data-validation-required-message="ID TURNO" />
-              <button class="submit" type="submit">BUSCAR</button>
+              <button class="submit" type="submit"><span class="material-symbols-outlined">
+                search
+                </span>BUSCAR</button>
             </form>
           </div>
 
@@ -229,7 +246,9 @@
             <form>
               <input class="controls" id="idTurno" type="number" placeholder="ID TURNO" required="required"
                 data-validation-required-message="ID TURNO" />
-              <button class="submit" type="submit">ELIMINAR</button>
+              <button class="submit" type="submit"><span class="material-symbols-outlined"> delete
+          
+              </span>ELIMINAR</button>
             </form>
           </div>
         </div>

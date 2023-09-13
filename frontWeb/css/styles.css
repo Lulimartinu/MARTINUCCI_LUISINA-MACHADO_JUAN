@@ -122,7 +122,7 @@ header ul a {
   text-align: center;
 }
 .sobre-nosotros h2 {
-  color:  #ffffff;
+  color:  #AA6C39;
   font-size: 7rem;
 }
 .sobre-nosotros p {
@@ -181,6 +181,18 @@ header ul a {
   background-color: #32248c;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+
 .formulario p{
   font-size: 20px;
   font-weight: bold;
@@ -189,6 +201,9 @@ header ul a {
 .metodos{
   width: 60%;
 }
+
+
+
 
 
 
