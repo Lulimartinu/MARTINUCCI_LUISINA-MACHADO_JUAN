@@ -120,10 +120,12 @@ header ul a {
   margin:0 4rem;
   font-weight: bold;
   text-align: center;
+  
 }
 .sobre-nosotros h2 {
-  color:  #AA6C39;
+  color:   #ffffff;
   font-size: 7rem;
+  
 }
 .sobre-nosotros p {
   font-size: 1.7rem;
@@ -188,9 +190,6 @@ header ul a {
   'GRAD' 0,
   'opsz' 24
 }
-
-
-
 
 
 .formulario p{
