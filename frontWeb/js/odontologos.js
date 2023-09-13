@@ -12,6 +12,41 @@ window.addEventListener('load',function(){
 
     let url = "http://localhost:8080";
 
+    function detallarOdontologos(){
+
+        const apiUrl = 'http://localhost:8080/odontologos/detallar';
+    
+        // solicitud GET detallar
+        fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('La solicitud no se completó con éxito');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!data || !Array.isArray(data)) {
+                // Verificar si `data` es undefined o no es un arreglo
+                throw new Error('Los datos no están en el formato esperado');
+            }
+    
+            //Formatear datos
+            let formateoDatos = data.map(odontologo => `<li>${odontologo.id + " " + odontologo.nombreOdontologo + " " + odontologo.apellidoOdontologo}</li>`);
+    
+            //elemento donde mostrar los datos
+            let listaOdontologos = document.getElementById('detallar');
+    
+            // Agregar el contenido HTML
+            listaOdontologos.innerHTML = `<ul>${formateoDatos.join('')}</ul>`;
+        })
+        .catch(error => {
+            console.error('Ocurrió un error:', error);
+        });
+    
+        
+        
+        }
+
 
 
     //CREAR NUEVO ODONTOLOGO
@@ -41,7 +76,8 @@ window.addEventListener('load',function(){
 
             console.log("algunos de los datos es incorrecto");
             return Promise.reject(response)
-        })        
+        })
+        console.log(detallarOdontologos())        
     }
 
 
@@ -103,8 +139,10 @@ formularioEliminar.addEventListener('submit', function (event) {
         .catch(error => {
             console.error('Ocurrió un error:', error);
         });
+        detallarOdontologos()
      
 });
+
 
 });
 
