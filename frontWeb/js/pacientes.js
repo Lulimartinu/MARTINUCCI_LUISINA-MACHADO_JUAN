@@ -61,16 +61,26 @@ window.addEventListener('load',function(){
    
        buscarPaciente()
     })
+    function buscarPaciente() {
+        const settings = {
+          method: "GET",
+          headers: {
+            
+          }
+        }
+        fetch(`${url}/pacientes/${idPaciente.value}`,settings)
+          .then(tareas => {
+            console.log("Tareas del usuario");
+            console.log(tareas);
+    
+            renderizarTareas(tareas)
+            botonesCambioEstado()
+            botonBorrarTarea()
+    
+          })
+          .catch(error => {
+            console.log(error);
+          })
+      };
 
-    function buscarPaciente(){
-        fetch(`${url}/pacientes/${idPaciente.value}`)
-        .then(response => {
-            console.log(response);
-            if (response.ok) return response.json()
-
-            console.log("algunos de los datos es incorrecto");
-            return Promise.reject(response)
-        })
-        
-    }
 })
