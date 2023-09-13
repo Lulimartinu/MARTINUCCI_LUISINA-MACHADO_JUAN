@@ -18,7 +18,7 @@ public class ClinicaOdontologicaApplication {
 		LOGGER.info("LA CLINICA ODONTOLÓGICA MM ARRANCÓ A FUNCIONAR");
 	}
 
-	@Beancle
+	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
 	}

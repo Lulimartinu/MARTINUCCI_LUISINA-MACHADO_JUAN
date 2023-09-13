@@ -7,11 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="clinica-odontologica" />
+        <module name="clinicaOdontologica" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="clinicaOdontologica" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
