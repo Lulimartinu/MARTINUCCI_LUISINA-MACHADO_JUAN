@@ -82,5 +82,38 @@ window.addEventListener('load', function () {
     })
 
 
+//ELIMINAR PACIENTE X ID
+formularioEliminar.addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    //ID del paciente
+    let idPac = idPaciente.value;
+    // url
+    let apiUrl = 'http://localhost:8080/pacientes/eliminar/' + idPac;
+    
+    // Configuración de la solicitud DELETE
+    let settings = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json' 
+                }
+    };
+    
+    // Realizar la solicitud DELETE
+    fetch(apiUrl, settings)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('La solicitud no se completó con éxito');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Ocurrió un error:', error);
+        });
+});
+
 });
   
