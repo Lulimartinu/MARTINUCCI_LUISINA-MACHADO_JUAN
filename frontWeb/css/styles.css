@@ -246,5 +246,35 @@ footer a {
 
 
 
+.secondsection {
+  padding: 0 7%;
+margin: 1rem 1rem;}
+
+.secondsection h2 {color: #242E53;
+      font-size: 2rem;}
+
+.secondsection div {display: flex;
+  justify-content: space-around;}
+
+
+.alibravo h6 {color: #3F4868;
+          font-size: 1.5rem;
+        margin: 0.5rem;}
+
+.alibravo p{color:#38388d;
+      width: 395px;
+      font-weight: bold;
+      font-size: 1rem;
+       text-align: center;}
+
+.secondsection img{
+  width: 20%;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 
