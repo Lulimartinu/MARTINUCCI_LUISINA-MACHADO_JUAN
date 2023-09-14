@@ -39,7 +39,7 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public PacienteSalidaDto crearPaciente(PacienteEntradaDto paciente) throws BadRequestException{
+        public PacienteSalidaDto crearPaciente(PacienteEntradaDto paciente) {
             Paciente pacienteGuardado = pacienteRepository.save(dtoEntradaAEntidad(paciente));
             PacienteSalidaDto pacienteSalidaDto = entidadADtoSalida(pacienteGuardado);
             LOGGER.info("Se ha creado un nuevo Paciente : {}", pacienteSalidaDto);
@@ -59,7 +59,7 @@ public class PacienteService  implements IPacienteService {
         }
 
         @Override
-        public PacienteSalidaDto buscarPacientePorId(Long id){
+        public PacienteSalidaDto buscarPacientePorId(Long id) {
             Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
             PacienteSalidaDto pacienteSalidaDto = null;
 

@@ -24,12 +24,12 @@ public class PacienteEntradaDto {
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
     private LocalDate fechaIngreso;
     @NotNull(message = "El Domicilio  no puede ser nula")
-    private Domicilio domicilio;
+    private DomicilioEntradaDto domicilio;
 
     public PacienteEntradaDto() {
     }
 
-    public PacienteEntradaDto(String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
+    public PacienteEntradaDto(String nombrePaciente, String apellidoPaciente, int dni, LocalDate fechaIngreso, DomicilioEntradaDto domicilio) {
         this.nombrePaciente = nombrePaciente;
         this.apellidoPaciente = apellidoPaciente;
         this.dni = dni;
@@ -69,11 +69,7 @@ public class PacienteEntradaDto {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public Domicilio getDomicilio() {
+    public DomicilioEntradaDto getDomicilio() {
         return domicilio;
-    }
-
-    public void setDomicilio(Domicilio domicilio) {
-        this.domicilio = domicilio;
     }
 }
