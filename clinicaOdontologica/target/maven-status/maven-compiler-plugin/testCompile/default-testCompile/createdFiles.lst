@@ -1,1 +1,4 @@
+com\digitalhouse\backend\integrador\clinicaOdontologica\PacienteServiceTest.class
 com\digitalhouse\backend\integrador\clinicaOdontologica\ClinicaOdontologicaApplicationTests.class
+com\digitalhouse\backend\integrador\clinicaOdontologica\TurnoServiceTest.class
+com\digitalhouse\backend\integrador\clinicaOdontologica\OdontologoServiceTest.class

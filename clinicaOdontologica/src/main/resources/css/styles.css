@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a:hover {
+  opacity: 60%;
+}
+
+
+
+/*ESTILOS DEL HEADER*/
+.logo{
+  position:relative;
+  width: 10%;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items:center;
+}
+header nav {
+  width: 90%;
+}
+.nav-font {
+  font-family: 'Montserrat', sans-serif !important;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+header ul a {
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+
+
+/*ESTILOS DE BIENVENIDA*/
+#bienvenida {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  
+}
+.home{
+  margin: 5rem;
+}
+.title {
+  font-size: 5rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.mm{
+  font-size: 3rem;
+  color: #000000;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+
+/*ESTILOS DE BACKGROND IMAGE*/
+#bienvenida::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+#bienvenida::after {
+  content: "";
+  background-image: url("../uploads/Fondo.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -2;
+}
+
+
+
+/*ESTILOS DE SITIO*/
+.sitio {
+  background-image: url(../uploads/fondo2.jpg);
+  background-size:cover;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+
+
+/*SOBRE NOSOTROS*/
+.sobre-nosotros {
+  margin:0 4rem;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.sobre-nosotros h2 {
+  color:   #ffffff;
+  font-size: 7rem;
+  
+}
+.sobre-nosotros p {
+  font-size: 1.7rem;
+}
+
+
+
+/*FORMULARIOS*/
+.formularios{
+  
+  display:flex;
+  flex-direction: column;
+ align-items: center;
+}
+.formulario {  
+ 
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+  width: 80%;
+  margin: 8rem;
+  padding: 1rem;
+  color:#AA6C39;
+  background-color:#92C7C7;
+  font-size: 1rem;
+}
+
+
+.controls {
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  background-color: white;
+  border-color: wheat;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-diseño{
+  width:60%
+}
+
+/*BOTON FORMULARIO*/
+.formulario button {
+  width: 40%;
+  border-radius: 20px;
+  background-color: #C79191; 
+  color: #FFF;
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+.formulario button:hover {
+  background-color: #32248c;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+.formulario p{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.metodos{
+  width: 60%;
+}
+
+
+footer{
+ width: 100vw;
+  background-color: #C79191;
+  padding:80px 0;
+}
+
+
+footer a {
+  color: wheat;
+}
+
+.footer-links { 
+  margin-bottom:2rem ;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formularios ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+
+  
+}
+
+#detallarPacientes{
+ 
+ display: flex;
+ padding-left: 5rem;
+}
+
+#detallarOdontologos{
+  display: flex;
+  padding-left: 4rem;
+}
+
+
+
+
+
+
+.secondsection {
+  padding: 0 7%;
+margin: 1rem 1rem;}
+
+.secondsection h2 {color: #242E53;
+      font-size: 2rem;}
+
+.secondsection div {display: flex;
+  justify-content: space-around;}
+
+
+.alibravo h6 {color: #3F4868;
+          font-size: 1.5rem;
+        margin: 0.5rem;}
+
+.alibravo p{color:#38388d;
+      width: 395px;
+      font-weight: bold;
+      font-size: 1rem;
+       text-align: center;}
+
+.secondsection img{
+  width: 20%;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
