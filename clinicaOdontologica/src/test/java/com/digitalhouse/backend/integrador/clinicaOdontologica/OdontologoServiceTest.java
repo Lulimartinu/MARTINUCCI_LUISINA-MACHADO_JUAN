@@ -38,7 +38,7 @@ public class OdontologoServiceTest {
 
     @Test
     @Order(2)
-    void alQuererEliminarElOdontologConId2(){
+    void alQuererEliminarElOdontologConId2_DeberiaArrojarResourceNotFound(){
         try {
         odontologoService.eliminarOdontologoPorId(2L);
         }
