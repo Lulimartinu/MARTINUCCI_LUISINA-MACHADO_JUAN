@@ -30,7 +30,7 @@ window.addEventListener('load', function () {
                 }
 
                 //Formatear datos
-                let formateoDatos = data.map(odontologo => `<li>${odontologo.id + " " + odontologo.nombreOdontologo + " " + odontologo.apellidoOdontologo}</li>`);
+                let formateoDatos = data.map(odontologo => `<li> ID: ${odontologo.id + " ,  " + odontologo.nombreOdontologo + " " + odontologo.apellidoOdontologo}</li>`);
 
                 //elemento donde mostrar los datos
                 let listaOdontologos = document.getElementById('detallarOdontologos');

@@ -40,7 +40,7 @@ window.addEventListener('load', function () {
                 }
 
                 //Formatear datos
-                let formateoDatos = data.map(paciente => `<li>${paciente.id + " " + paciente.nombrePaciente + " " + paciente.apellidoPaciente}</li>`);
+                let formateoDatos = data.map(paciente => `<li> ID: ${paciente.id + " ," + paciente.nombrePaciente + " " + paciente.apellidoPaciente}</li>` );
 
                 //elemento donde mostrar los datos
                 let listaPacientes = document.getElementById('detallarPacientes');
@@ -185,13 +185,6 @@ detallarPacientes();
             // ACA DEBERIA  actualizar la lista de pacientes pero no anda no se que onda 
             //PARA MI ESTA LLAMADA A LA FUNCION VA EN OTRO LADO O NO SE 
             detallarPacientes();
-
-
-
-
-
-
-
 
 
 
