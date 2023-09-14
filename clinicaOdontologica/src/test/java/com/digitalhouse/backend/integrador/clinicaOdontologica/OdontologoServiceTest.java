@@ -20,39 +20,6 @@ public class OdontologoServiceTest {
 
     @Test
     @Order(1)
-    void deberiaRetornarseUnaListaConTresOdontologos(){
-        OdontologoEntradaDto odonto1 = new OdontologoEntradaDto("AD-154236781",
-                "luisina",
-                "martin");
-        OdontologoEntradaDto odonto2 = new OdontologoEntradaDto("AD-154236782",
-                "Juan",
-                "Machado");
-        OdontologoEntradaDto odonto3 = new OdontologoEntradaDto("AD-154236783",
-                "luisina",
-                "machado");
-        odontologoService.crearOdontologo(odonto1);
-        odontologoService.crearOdontologo(odonto2);
-        odontologoService.crearOdontologo(odonto3);
-
-        assertEquals(odontologoService.detallarOdontologos().size(),3);
-    }
-
-    @Test
-    @Order(2)
-    void alQuererEliminarElOdontologConId2_DeberiaArrojarResourceNotFound(){
-        try {
-        odontologoService.eliminarOdontologoPorId(2L);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        assertThrows(ResourceNotFoundException.class, () -> odontologoService.eliminarOdontologoPorId(2L));
-
-    }
-
-
-   @Test
-    @Order(3)
     void deberiaCrearUnOdontologoConNombreLuciana(){
         OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto("AA-123456789","Luciana","Murga");
 
@@ -61,6 +28,36 @@ public class OdontologoServiceTest {
         assertEquals("Luciana",odontologoSalidaDto.getNombreOdontologo());
 
     }
+    @Test
+    @Order(2)
+    void alQuererEliminarElOdontologConId2_DeberiaArrojarResourceNotFound(){
+        try {
+            odontologoService.eliminarOdontologoPorId(2L);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        assertThrows(ResourceNotFoundException.class, () -> odontologoService.eliminarOdontologoPorId(2L));
+
+    }
+    @Test
+    @Order(3)
+    void deberiaRetornarseUnaListaConTresOdontologos(){
+        OdontologoEntradaDto odonto1 = new OdontologoEntradaDto("AD-154236781",
+                "luisina",
+                "martinucci");
+        OdontologoEntradaDto odonto2 = new OdontologoEntradaDto("AD-154236782",
+                "Juan",
+                "Machado");
+        odontologoService.crearOdontologo(odonto1);
+        odontologoService.crearOdontologo(odonto2);
+
+        assertEquals(odontologoService.detallarOdontologos().size(),3);
+    }
+
+
+
+
 
 
 }
