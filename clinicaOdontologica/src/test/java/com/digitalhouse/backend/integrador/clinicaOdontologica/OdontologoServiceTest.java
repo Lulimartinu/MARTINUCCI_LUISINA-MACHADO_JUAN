@@ -54,10 +54,4 @@ public class OdontologoServiceTest {
 
         assertEquals(odontologoService.detallarOdontologos().size(),3);
     }
-
-
-
-
-
-
 }

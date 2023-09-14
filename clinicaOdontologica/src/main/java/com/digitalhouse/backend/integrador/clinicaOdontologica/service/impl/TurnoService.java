@@ -94,7 +94,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto buscarTurnoPorId(Long id) throws ResourceNotFoundException {
+    public TurnoSalidaDto buscarTurnoPorId(Long id) {
         Turno turnoBuscado = turnoRepository.findById(id).orElse(null);
         TurnoSalidaDto turnoSalidaDto = null;
 

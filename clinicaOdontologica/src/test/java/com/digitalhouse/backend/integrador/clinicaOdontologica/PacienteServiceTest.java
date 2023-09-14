@@ -35,18 +35,20 @@ public class PacienteServiceTest {
         assertEquals(51358032, pacienteSalidaDto.getDni());
     }
 
-/*
-   @Test
-   @Order(2)
-    void noDeberiaCrearUnPacienteConDniIgualA51358032(){
-        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Juan", "Machado", 51358032, LocalDate.of(2023, 12, 25), new DomicilioEntradaDto("lavalleja", 4587, "montevideo", "montevideo"));
 
-        PacienteSalidaDto pacienteSalidaDto = pacienteService.crearPaciente(pacienteEntradaDto);
+    @Test
+    @Order(4)
+    void noDeberiaCrearUnPacienteConDniIgualA51358032() {
+
+        //EN EL TEST 1 CREAMOS UN PACIENTE CON EL DNI SIMILAR
+
+        PacienteEntradaDto pacienteDuplicado = new PacienteEntradaDto("Luisina", "Machado", 51358032, LocalDate.of(2023, 12, 25), new DomicilioEntradaDto("lavalleja", 4587, "montevideo", "montevideo"));
+
         assertThrows(DataIntegrityViolationException.class, () -> {
-            pacienteService.crearPaciente(pacienteEntradaDto);
-        }) ;
+            pacienteService.crearPaciente(pacienteDuplicado);
+        });
     }
-*/
+
 
   @Test
     @Order(2)
