@@ -78,4 +78,34 @@ public class TurnoServiceTest {
         assertNotNull(turnoService.buscarTurnoPorId(1L));
     }
 
+    @Test
+    @Order(3)
+    void deberiaEliminarElTurno()throws ResourceNotFoundException{
+
+        //CREAMOS PACIENTE
+        PacienteEntradaDto paciente = new PacienteEntradaDto("Lionel", "Messi", 66357732, LocalDate.of(2023, 10, 25), new DomicilioEntradaDto("Rosario", 125, "Rosario", "Santa Fe"));
+        PacienteSalidaDto pacienteSalidaDto = pacienteService.crearPaciente(paciente);
+
+        //CREAMOS ODONTOLOGO
+        OdontologoEntradaDto odontologo = new OdontologoEntradaDto("AB-143496254","Sofia","Machado");
+        OdontologoSalidaDto odontologoSalidaDto = odontologoService.crearOdontologo(odontologo);
+
+        //CREAMOS TURNO
+        TurnoEntradaDto turnoEntradaDto = new TurnoEntradaDto(1L,1L, LocalDateTime.of(2023,11,25,15,00));
+        try {
+            TurnoSalidaDto turnoSalidaDto = turnoService.crearTurno(turnoEntradaDto);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+        // Verificaremos qe el turno no sea null
+        assertNotNull(turnoService.buscarTurnoPorId(1L));
+
+        //eliminamos el turno
+        turnoService.eliminarTurnoPorId(1L);
+
+        // Verificaremos qe el turno se elimino
+        assertNull(turnoService.buscarTurnoPorId(1L));
+    }
 }
