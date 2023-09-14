@@ -36,7 +36,7 @@ public class TurnoServiceTest {
     TurnoService turnoService;
 
     @Test
-     @Order(2)
+     @Order(1)
      void deberiaCrearUnTurnoConId1() throws BadRequestException {
 
         //CREAMOS PACIENTE ID1
@@ -56,7 +56,7 @@ public class TurnoServiceTest {
      }
 
     @Test
-    @Order(1)
+    @Order(2)
     void deberiaEncontrarElTurno(){
         //CREAMOS PACIENTE
         PacienteEntradaDto paciente = new PacienteEntradaDto("Lionel", "Messi", 51358532, LocalDate.of(2023, 10, 25), new DomicilioEntradaDto("Rosario", 125, "Rosario", "Santa Fe"));
