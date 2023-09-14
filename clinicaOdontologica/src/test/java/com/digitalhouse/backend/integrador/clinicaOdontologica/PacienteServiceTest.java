@@ -5,6 +5,7 @@ import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.entrada.pacie
 import com.digitalhouse.backend.integrador.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl.PacienteService;
+import com.digitalhouse.backend.integrador.clinicaOdontologica.service.impl.TurnoService;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -72,6 +73,7 @@ public class PacienteServiceTest {
         }
         assertThrows(ResourceNotFoundException.class, () -> pacienteService.eliminarPacientePorId(1L));
     }
+
 }
 
 
