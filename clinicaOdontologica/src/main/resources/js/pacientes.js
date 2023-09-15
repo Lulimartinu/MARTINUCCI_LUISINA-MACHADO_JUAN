@@ -140,7 +140,7 @@ detallarPacientes();
         let idPac = idPacienteEliminar.value;
         // url
         let apiUrl = 'http://localhost:8080/pacientes/eliminar/' + idPac;
-
+        detallarPacientes();
         // Configuración de la solicitud DELETE
         let settings = {
             method: 'DELETE',
@@ -159,7 +159,7 @@ detallarPacientes();
         })
         .then(data => {
             console.log(data);
-
+            detallarPacientes();
 
 
 
@@ -179,6 +179,7 @@ detallarPacientes();
                 if (textoElemento.includes(idPac)) {
                     // Elimina el pacient de  LI de la lista
                     elemento.remove();
+                    detallarPacientes();
                 }
             });
 
